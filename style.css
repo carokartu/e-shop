@@ -47,7 +47,10 @@ background-color: pink ;
 
 
 .filtros { 
-    background-color: lightcoral
+    background-color: lightcoral ;
+    flex: 0  1 auto ;
+    align-self: auto;
+
 }
 
 
@@ -84,6 +87,9 @@ background-color: pink ;
     display: flex;
     background-color: salmon;
     justify-content: center;
+    flex: 1 1 auto ;
+    align-self:auto;
+ 
 }
 
 .contenedor-tarjetas>div {

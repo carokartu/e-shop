@@ -1,0 +1,96 @@
+.contenedor-menu{
+background-color: pink ; 
+ display: flex;
+  justify-content: space-between;
+}
+
+
+.ada{
+     
+}
+
+.carrito {  
+
+}
+
+
+.contenedor-titulo { 
+    background-color: powderblue;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    margin-top:20px;
+    align-items: center ;
+}
+
+.titulo-principal {
+
+    background-color: purple;
+    font-size: 50px;
+}
+
+.contenedor-tarjetas-aside{
+    /* background-color: seagreen ;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 600px; */
+    background-color: seagreen ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+    height: 600px;
+}
+
+
+.filtros { 
+    background-color: lightcoral
+}
+
+
+.busqueda{
+
+    background-color: royalblue ;
+}
+
+.barra-productos{
+    background-color : black ;
+
+}
+
+.contenedor-barra{
+
+    background-color: tomato ;
+}
+
+.info-productos {
+
+    background-color: lawngreen ;
+}
+
+
+.contenedor-tarjetas {
+    background-color: yellowgreen;
+    width: 700px;
+    height: 300px;
+    display: flex;
+    flex-wrap:wrap;
+}
+.tarjetas{
+
+    display: flex;
+    background-color: salmon;
+    justify-content: center;
+}
+
+.contenedor-tarjetas>div {
+
+    background-color: red; 
+    border: 1px solid black;
+    margin: 5px ; 
+    flex: 1 1 200px;
+   
+    } 

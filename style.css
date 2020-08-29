@@ -42,21 +42,27 @@ background-color: pink ;
     justify-content: flex-start;
     align-content: stretch;
     align-items: flex-start;
-    height: 600px;
+
 }
 
 
 .filtros { 
+    display: flex; 
     background-color: lightcoral ;
     flex: 0  1 auto ;
     align-self: auto;
-
+    height: 700px;
 }
 
+.div-filtros{
+    display: flex;
+}
 
-.busqueda{
+.menu-aside{
 
     background-color: royalblue ;
+    height: 500px;
+    height: 1000px;
 }
 
 .barra-productos{
@@ -78,9 +84,10 @@ background-color: pink ;
 .contenedor-tarjetas {
     background-color: yellowgreen;
     width: 700px;
-    height: 300px;
+ 
     display: flex;
     flex-wrap:wrap;
+    height: 1000px;
 }
 .tarjetas{
 

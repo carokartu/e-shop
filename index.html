@@ -5,11 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Clase 20 </title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+  />
+    <title>Proyecto 2 </title>
 </head>
 
 <body>
-
+ <!--   
+     COMIENZO DE MENU NAV
+    
+    -->
     <nav class="contenedor-menu">
 
         <div class="ada"> ADA</div>
@@ -17,10 +24,29 @@
 
     </nav>
 
+    <!--   
+     FIN DE MENU NAV
+    
+    -->
+<!--   
+     COMIENZO DE TITULO 
+    
+    -->
 
     <header class="contenedor-titulo">
         <h1 class="titulo-principal"> TITULO </h1>
     </header>
+
+    <!--   
+     FIN DE TITULO
+    
+    -->
+
+
+    <!--   
+     COMIENZO DE BARRA PRODUCTOS 
+    
+    -->
     <section class="barra-productos">
         <div class="contenedor-barra">
             <p class="info-productos"> mostrando productos </p>
@@ -28,51 +54,215 @@
         </div>
     </section>
 
-    <section class="contenedor-tarjetas-aside">
+    <!--   
+     FIN DE BARRA PRODUCTOS
+    
+    -->
+
+    <!--   
+     COMIENZO DE FILTRO 
+    
+    -->
+    <section class="contenedor-aside">
         <aside class="filtros">
-            <div class="div-filtros">
-               
-                <ul class="menu-aside">
-                    <h2>FILTROS</h2>
-                    <h2> BUSQUEDA</h2>
-                    <li>CONSOLAS</li>
-                    <li> NOTEBOOKS</li>
-                    <li> CÁMARAS</li>
-                    <li> CELULARES</li>
-                    <li>ACCESORIOS</li>
-                    <li> OTROS</li>
-                
-                
-                    <h2> PUNTAJE</h2>
-                    <li>⭐⭐⭐⭐⭐ (5)</li>
-                    <li> ⭐⭐⭐⭐ (4)</li>
-                    <li> ⭐⭐⭐ (3)</li>
-                    <li>⭐⭐(2)</li>
-                    <li>⭐(1)</li>
-                    
-                </ul>
+            <div>
+                <label> Filtro <input type="text" id="filtro" />
+                </label>
             </div>
+
+            <h3 class="filter-name">PUNTAJE</h3>
+            <label>
+                <input type="checkbox" name="review" class="filter review-filter" value="5" id="checkbox-5" />
+                <div class="review">
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                </div>
+                (5)
+            </label>
+            <label>
+                <input type="checkbox" name="review" class="filter review-filter" value="4" id="checkbox-4" />
+                <div class="review">
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                    <i class="far fa-star" aria-hidden="true"></i>
+                </div>
+                (4)
+            </label>
+            <label>
+                <input type="checkbox" name="review" class="filter review-filter" value="3" />
+                <div class="review">
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                    <i class="far fa-star" aria-hidden="true"></i>
+                    <i class="far fa-star" aria-hidden="true"></i>
+                </div>
+                (3)
+            </label>
+            <label>
+                <input type="checkbox" name="review" class="filter review-filter" value="2" />
+                <div class="review">
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                    <i class="far fa-star" aria-hidden="true"></i>
+                    <i class="far fa-star" aria-hidden="true"></i>
+                    <i class="far fa-star" aria-hidden="true"></i>
+                </div>
+                (2)
+            </label>
+            <label>
+                <input type="checkbox" name="review" class="filter review-filter" value="1" />
+                <div class="review">
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                    <i class="far fa-star" aria-hidden="true"></i>
+                    <i class="far fa-star" aria-hidden="true"></i>
+                    <i class="far fa-star" aria-hidden="true"></i>
+                    <i class="far fa-star" aria-hidden="true"></i>
+                  </div>
+                  (1)
+                </label>
         </aside>
 
-        <div class="tarjetas">
-            <div class="contenedor-tarjetas">
-              
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-    </section>
 
+<!--   
+     FIN DE FILTRO
+    
+    -->
+
+    <!--   
+     COMIENZO DE TARJETAS 
+    
+    -->  
+    <div class="tarjetas">
+        <div class="contenedor-tarjetas">
+
+
+            <article class="product" data-nombre="android" data-categoria="celulares" data-precio="22499"
+                data-rating="4">
+                <div class="product-img-container">
+                    <img src="http://www.placekitten.com/500" class="product-img" />
+                </div>
+                <div class="product-body">
+                    <h3 class="product-name">Celular Android</h3>
+                    <p class="product-price">$ 22499</p>
+                    <div class="review">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product" data-nombre="samsung" data-categoria="celulares" data-precio="22499"
+                data-rating="3">
+                <div class="product-img-container">
+                    <img src="http://www.placekitten.com/600" class="product-img" />
+                </div>
+                <div class="product-body">
+                    <h3 class="product-name">Celular Samsung</h3>
+                    <p class="product-price">$ 22499</p>
+                    <div class="review">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product" data-nombre="samsung" data-categoria="celulares" data-precio="22499"
+                data-rating="3">
+                <div class="product-img-container">
+                    <img src="http://www.placekitten.com/800" class="product-img" />
+                </div>
+                <div class="product-body">
+                    <h3 class="product-name">Celular Motorola</h3>
+                    <p class="product-price">$ 22499</p>
+                    <div class="review">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </article>
+
+
+
+            <article class="product" data-nombre="samsung" data-categoria="celulares" data-precio="22499"
+                data-rating="3">
+                <div class="product-img-container">
+                    <img src="http://www.placekitten.com/900" class="product-img" />
+                </div>
+                <div class="product-body">
+                    <h3 class="product-name">Celular Iphone </h3>
+                    <p class="product-price">$ 22499</p>
+                    <div class="review">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </article>
+
+
+
+            <article class="product" data-nombre="samsung" data-categoria="celulares" data-precio="22499"
+                data-rating="2">
+                <div class="product-img-container">
+                    <img src="http://www.placekitten.com/300" class="product-img" />
+                </div>
+                <div class="product-body">
+                    <h3 class="product-name">Celular Xiaomi</h3>
+                    <p class="product-price">$ 22499</p>
+                    <div class="review">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="product" data-nombre="samsung" data-categoria="celulares" data-precio="22499"
+                data-rating="1">
+                <div class="product-img-container">
+                    <img src="http://www.placekitten.com/500" class="product-img" />
+                </div>
+                <div class="product-body">
+                    <h3 class="product-name">Celular Sony </h3>
+                    <p class="product-price">$ 22499</p>
+                    <div class="review">
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+    
+    <script src="index.js"></script>
+</body>
+
+</html>
 </body>
 
 </html>

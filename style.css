@@ -1,4 +1,10 @@
-.contenedor-menu{
+body {
+    
+    background: #cacaca;
+  }
+
+
+  .contenedor-menu{
 background-color: pink ; 
  display: flex;
   justify-content: space-between;
@@ -29,27 +35,17 @@ background-color: pink ;
     font-size: 50px;
 }
 
-.contenedor-tarjetas-aside{
-    /* background-color: seagreen ;
-    display: flex;
-    flex-direction: column;
-    width: 25%;
-    height: 600px; */
+.contenedor-aside{
+    
     background-color: seagreen ;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-content: stretch;
-    align-items: flex-start;
-
+   
 }
 
 
 .filtros { 
-    display: flex; 
+    
     background-color: lightcoral ;
-    flex: 0  1 auto ;
     align-self: auto;
     height: 700px;
 }
@@ -83,7 +79,7 @@ background-color: pink ;
 
 .contenedor-tarjetas {
     background-color: yellowgreen;
-    width: 700px;
+    width: 100%;
  
     display: flex;
     flex-wrap:wrap;
@@ -107,3 +103,39 @@ background-color: pink ;
     flex: 1 1 200px;
    
     } 
+
+
+  aside {
+    flex: 1;
+  }
+  
+  label {
+    display: flex;
+  }
+  
+  .container {
+    flex: 3;
+    display: flex;
+  }
+  
+  .product {
+    background-color: #fff;
+    padding: 30px 25px;
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .product-img-container {
+    height: 250px;
+  }
+  
+  .product-img {
+    height: 100%;
+    margin: 0 auto;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+

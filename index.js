@@ -43,3 +43,41 @@ for (let checkbox of filtroRating) {
     }
   };
 }
+
+
+const boton = document.getElementById('limpiar')
+const busqueda = document.getElementById(`filtro`) 
+const checkboxes = document.querySelectorAll (`review-filter`) 
+
+
+const limpiarFiltro = () => {
+ 
+  busqueda.value = ``
+}
+
+
+const limpiarCheck = () => {
+
+  for ( let checkbox of checkboxes) {
+
+    checkbox.checked = false 
+}
+}
+
+
+boton.onclick = () => {
+
+limpiarFiltro() 
+
+console.log (limpiarFiltro()) 
+
+limpiarCheck ()
+
+console.log (limpiarCheck()) 
+}
+
+
+
+
+
+

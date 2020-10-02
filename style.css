@@ -1,53 +1,87 @@
 body {
+ 
     
     background: #cacaca;
   }
 
+  .pagina{
+    display: flex;
+    margin-top: 35px;
+  }
 
   .contenedor-menu{
-background-color: pink ; 
+background-color: #fafafa ; 
  display: flex;
   justify-content: space-between;
 }
 
 
 .ada{
-     
+   display: flex;
+   justify-content: center;
+   align-items: center;  
 }
 
-.carrito {  
-
+.ada-shop{
+  font-size: 30px;
+}
+.fas.fa-shopping-cart { 
+  font-size: 30px; 
+  padding: 30px;
 }
 
 
 .contenedor-titulo { 
     background-color: powderblue;
-    height: 500px;
+    height: 300px;
     display: flex;
     justify-content: center;
-    margin-top:20px;
+    margin-top:35px;
     align-items: center ;
+    position: relative;
+    background-image: url(./imagenes/background.jpeg);
+    background-size: cover;
+    background-position: center;
 }
+/* .background-electronica{
+  
+  background-image: url(./imagenes/background.jpeg);
+  background-size: cover;
+  background-position: center;
+} */
 
 .titulo-principal {
 
     background-color: purple;
     font-size: 50px;
-}
-
-.contenedor-aside{
+    position: absolute;
     
-    background-color: seagreen ;
-    display: flex;
-   
 }
 
+
+/* 
+ INICIO DE FILTROS  */
+
+.busqueda {
+  position: relative;
+}
+
+
+ .fas.fa-search {
+
+  position: relative;
+  right: 20px;
+  top: 2px;
+ }
 
 .filtros { 
     
     background-color: lightcoral ;
     align-self: auto;
-    height: 700px;
+    height: 300px;
+    width: 200px;
+
+    
 }
 
 .div-filtros{
@@ -60,10 +94,10 @@ background-color: pink ;
     height: 500px;
     height: 1000px;
 }
+/* INICIO DE TARJETAS */
+
 
 .barra-productos{
-    background-color : black ;
-
 }
 
 .contenedor-barra{
@@ -72,11 +106,27 @@ background-color: pink ;
 }
 
 .info-productos {
-
-    background-color: lawngreen ;
+  height: 50px;
+  display: flex;
+  padding-top: 25px;
+  border: 2px #fafafa solid;
 }
 
+.boton-grilla-lista{
+  display: flex;
 
+  align-items: center;
+  margin-left: 523px;
+}
+.fas.fa-th,.fas.fa-th-list{
+  font-size: 20px;
+}
+
+.info-mostrar{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 15px;
+
+}
 .contenedor-tarjetas {
     background-color: yellowgreen;
     width: 100%;

@@ -5,22 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-  />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
     <title>Proyecto 2 </title>
 </head>
 
 <body>
- <!--   
+    <!--   
      COMIENZO DE MENU NAV
     
     -->
     <nav class="contenedor-menu">
-a
-        <div class="ada"> ADA</div>
-        <div class="carrito"> carrito </div>
+
+        <div class="ada">
+
+            <p class="ada-shop"> ADA SHOP </p>
+        </div>
+
+
+
+        <i class="fas fa-shopping-cart"></i>
+
+
 
     </nav>
 
@@ -28,13 +34,14 @@ a
      FIN DE MENU NAV
     
     -->
-<!--   
+    <!--   
      COMIENZO DE TITULO 
     
     -->
 
     <header class="contenedor-titulo">
-        <h1 class="titulo-principal"> TITULO </h1>
+
+        <h1 class="titulo-principal"> ELECTRONICA </h1>
     </header>
 
     <!--   
@@ -43,227 +50,349 @@ a
     -->
 
 
-    <!--   
-     COMIENZO DE BARRA PRODUCTOS 
-    
-    -->
-    <section class="barra-productos">
-        <div class="contenedor-barra">
-            <p class="info-productos"> mostrando productos </p>
-
-        </div>
-    </section>
-
-    <!--   
-     FIN DE BARRA PRODUCTOS
-    
-    -->
 
     <!--   
      COMIENZO DE FILTRO 
     
     -->
-    <section class="contenedor-aside">
-        <aside class="filtros">
-            <div>
-                <label> Filtro <input type="text" id="filtro" />
+    <div class="pagina">
+        <section>
+            <aside class="filtros">
+
+                <div class="filtros-limpieza">
+                    <h3>FILTROS</h3>
+                    <button> <i class="fas fa-trash-alt"> </i> </button>
+
+                </div>
+
+
+                <div class="busqueda">
+
+
+                    <h3> BÚSQUEDA </h3>
+                    <input type="text" id="filtro" />
+
+                    <label> <i class="fas fa-search"> </i> </label>
+
+                </div>
+
+                <h3 class="filter-name">PUNTAJE</h3>
+                <label>
+                    <input type="checkbox" name="review" class="filter review-filter" value="5" id="checkbox-5" />
+                    <div class="review">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                    </div>
+                    (5)
                 </label>
-
-                <button id="limpiar" > LIMPIAR </button>
-            </div>
-
-            <h3 class="filter-name">PUNTAJE</h3>
-            <label>
-                <input type="checkbox" name="review" class="filter review-filter" value="5" id="checkbox-5" />
-                <div class="review">
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                </div>
-                (5)
-            </label>
-            <label>
-                <input type="checkbox" name="review" class="filter review-filter" value="4" id="checkbox-4" />
-                <div class="review">
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="far fa-star" aria-hidden="true"></i>
-                </div>
-                (4)
-            </label>
-            <label>
-                <input type="checkbox" name="review" class="filter review-filter" value="3" />
-                <div class="review">
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="far fa-star" aria-hidden="true"></i>
-                    <i class="far fa-star" aria-hidden="true"></i>
-                </div>
-                (3)
-            </label>
-            <label>
-                <input type="checkbox" name="review" class="filter review-filter" value="2" />
-                <div class="review">
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="far fa-star" aria-hidden="true"></i>
-                    <i class="far fa-star" aria-hidden="true"></i>
-                    <i class="far fa-star" aria-hidden="true"></i>
-                </div>
-                (2)
-            </label>
-            <label>
-                <input type="checkbox" name="review" class="filter review-filter" value="1" />
-                <div class="review">
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="far fa-star" aria-hidden="true"></i>
-                    <i class="far fa-star" aria-hidden="true"></i>
-                    <i class="far fa-star" aria-hidden="true"></i>
-                    <i class="far fa-star" aria-hidden="true"></i>
-                  </div>
-                  (1)
+                <label>
+                    <input type="checkbox" name="review" class="filter review-filter" value="4" id="checkbox-4" />
+                    <div class="review">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                    </div>
+                    (4)
                 </label>
-        </aside>
+                <label>
+                    <input type="checkbox" name="review" class="filter review-filter" value="3" />
+                    <div class="review">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                    </div>
+                    (3)
+                </label>
+                <label>
+                    <input type="checkbox" name="review" class="filter review-filter" value="2" />
+                    <div class="review">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                    </div>
+                    (2)
+                </label>
+                <label>
+                    <input type="checkbox" name="review" class="filter review-filter" value="1" />
+                    <div class="review">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                    </div>
+                    (1)
+                </label>
+            </aside>
 
-
-<!--   
+        </section>
+        <!--   
      FIN DE FILTRO
     
     -->
 
-    <!--   
+        <!--   
      COMIENZO DE TARJETAS 
     
-    -->  
-    <div class="tarjetas">
-        <div class="contenedor-tarjetas">
+    -->
+        <section>
+            <header class="barra-productos">
+                <div class="info-productos">
+                    <p class="info-mostrar"> MOSTRANDO PRODUCTOS</p>
 
-
-            <article class="product" data-nombre="android" data-categoria="celulares" data-precio="22499"
-                data-rating="4">
-                <div class="product-img-container">
-                    <img src="http://www.placekitten.com/500" class="product-img" />
+                        <div class="boton-grilla-lista">
+                             <button> <i class="fas fa-th"></i> </button>
+                             <button> <i class="fas fa-th-list"></i> </button>
+                        </div>
+                    
                 </div>
-                <div class="product-body">
-                    <h3 class="product-name">Celular Android</h3>
-                    <p class="product-price">$ 22499</p>
-                    <div class="review">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                </div>
-            </article>
 
-            <article class="product" data-nombre="samsung" data-categoria="celulares" data-precio="22499"
-                data-rating="3">
-                <div class="product-img-container">
-                    <img src="http://www.placekitten.com/600" class="product-img" />
-                </div>
-                <div class="product-body">
-                    <h3 class="product-name">Celular Samsung</h3>
-                    <p class="product-price">$ 22499</p>
-                    <div class="review">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                </div>
-            </article>
+            </header>
 
-            <article class="product" 
-            data-nombre="motorola"
-             data-categoria="celulares"
-              data-precio="22499"
-                data-rating="3">
-                <div class="product-img-container">
-                    <img src="http://www.placekitten.com/800" class="product-img" />
-                </div>
-                <div class="product-body">
-                    <h3 class="product-name">Celular Motorola</h3>
-                    <p class="product-price">$ 22499</p>
-                    <div class="review">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                </div>
-            </article>
+            <div class="tarjetas">
+                <div class="contenedor-tarjetas">
 
 
+                    <article class="product" data-nombre="hp" data-categoria="auriculares" data-precio="22499"
+                        data-rating="4">
+                        <div class="product-img-container">
+                            <img src="./imagenes/auriculares-2.jpeg" class="product-img" />
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-name">Auriculares</h3>
+                            <p class="product-price">$ 22499</p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </article>
 
-            <article class="product" data-nombre="iphone" data-categoria="celulares" data-precio="22499"
-                data-rating="3">
-                <div class="product-img-container">
-                    <img src="http://www.placekitten.com/900" class="product-img" />
-                </div>
-                <div class="product-body">
-                    <h3 class="product-name">Celular Iphone </h3>
-                    <p class="product-price">$ 22499</p>
-                    <div class="review">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                </div>
-            </article>
+                    <article class="product" data-nombre="sony" data-categoria="auriculares" data-precio="22499"
+                        data-rating="3">
+                        <div class="product-img-container">
+                            <img src="./imagenes/auriculares.jpeg" class="product-img" />
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-name">Auriculares</h3>
+                            <p class="product-price">$ 22499</p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product" data-nombre="nikon" data-categoria="camara" data-precio="22499"
+                        data-rating="3">
+                        <div class="product-img-container">
+                            <img src="./imagenes/camara.jpeg" class="product-img" />
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-name">Camara</h3>
+                            <p class="product-price">$ 22499</p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </article>
 
 
 
-            <article class="product" data-nombre="xiaomi" data-categoria="celulares" data-precio="22499"
-                data-rating="2">
-                <div class="product-img-container">
-                    <img src="http://www.placekitten.com/300" class="product-img" />
-                </div>
-                <div class="product-body">
-                    <h3 class="product-name">Celular Xiaomi</h3>
-                    <p class="product-price">$ 22499</p>
-                    <div class="review">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                </div>
-            </article>
+                    <article class="product" data-nombre="motorola" data-categoria="celulares" data-precio="22499"
+                        data-rating="3">
+                        <div class="product-img-container">
+                            <img src="./imagenes/celular.jpeg" class="product-img" />
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-name">Celular motorola</h3>
+                            <p class="product-price">$ 22499</p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </article>
 
 
-            <article class="product" data-nombre="sony" data-categoria="celulares" data-precio="22499"
-                data-rating="1">
-                <div class="product-img-container">
-                    <img src="http://www.placekitten.com/500" class="product-img" />
-                </div>
-                <div class="product-body">
-                    <h3 class="product-name">Celular Sony </h3>
-                    <p class="product-price">$ 22499</p>
-                    <div class="review">
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                </div>
-            </article>
 
-        </div>
+                    <article class="product" data-nombre="hp" data-categoria="mouse" data-precio="22499"
+                        data-rating="2">
+                        <div class="product-img-container">
+                            <img src="./imagenes/mouse.jpeg" class="product-img" />
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-name">Mouse</h3>
+                            <p class="product-price">$ 22499</p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <article class="product" data-nombre="consola" data-categoria="nintendo" data-precio="22499"
+                        data-rating="1">
+                        <div class="product-img-container">
+                            <img src="./imagenes/nintendo.jpeg" class="product-img" />
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-name">Nintendo </h3>
+                            <p class="product-price">$ 22499</p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <article class="product" data-nombre="dell" data-categoria="notebook" data-precio="22499"
+                        data-rating="1">
+                        <div class="product-img-container">
+                            <img src="./imagenes/notebook-2.jpeg" class="product-img" />
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-name">Notebook</h3>
+                            <p class="product-price">$ 22499</p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product" data-nombre="hp" data-categoria="notebook" data-precio="22499"
+                        data-rating="1">
+                        <div class="product-img-container">
+                            <img src="./imagenes/notebook-3.jpeg" class="product-img" />
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-name">Notebook</h3>
+                            <p class="product-price">$ 22499</p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <article class="product" data-nombre="sony" data-categoria="notebook" data-precio="22499"
+                        data-rating="1">
+                        <div class="product-img-container">
+                            <img src="./imagenes/notebook.jpeg" class="product-img" />
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-name">Notebook </h3>
+                            <p class="product-price">$ 22499</p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product" data-nombre="consola" data-categoria="PlayStation" data-precio="22499"
+                        data-rating="1">
+                        <div class="product-img-container">
+                            <img src="./imagenes/ps4.jpeg" class="product-img" />
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-name">PlayStation 4 </h3>
+                            <p class="product-price">$ 22499</p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </article>
+
+
+
+                    <article class="product" data-nombre="consola" data-categoria="xbox" data-precio="22499"
+                        data-rating="1">
+                        <div class="product-img-container">
+                            <img src="./imagenes/xbox.jpeg" class="product-img" />
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-name">Xbox </h3>
+                            <p class="product-price">$ 22499</p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <article class="product" data-nombre="iphone" data-categoria="celular" data-precio="22499"
+                        data-rating="1">
+                        <div class="product-img-container">
+                            <img src="./imagenes/iphone.jpeg" class="product-img" />
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-name">Celular Iphone</h3>
+                            <p class="product-price">$ 22499</p>
+                            <div class="review">
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
     </div>
-</section>
-    
+
     <script src="index.js"></script>
 </body>
 

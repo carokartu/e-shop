@@ -18,14 +18,14 @@
     <nav class="contenedor-menu">
 
         <div class="ada">
-
-            <p class="ada-shop"> ADA SHOP </p>
+            <img class="logo-ada" src="./imagenes/ada.svg" alt="">
+            <p class="ada-shop">  ADA SHOP </p>
         </div>
 
 
-
+        <button class="boton-carrito">
         <i class="fas fa-shopping-cart"></i>
-
+    </button>
 
 
     </nav>
@@ -41,7 +41,7 @@
 
     <header class="contenedor-titulo">
 
-        <h1 class="titulo-principal"> ELECTRONICA </h1>
+        <h1 class="titulo-principal"> ELECTRÓNICA </h1>
     </header>
 
     <!--   
@@ -61,22 +61,47 @@
 
                 <div class="filtros-limpieza">
                     <h3>FILTROS</h3>
-                    <button> <i class="fas fa-trash-alt"> </i> </button>
+
+                
+                    <button id="limpiar" > <i class="fas fa-trash-alt"> </i> </button>
+                    <P>limpiar</P>
 
                 </div>
 
-
+                <div class="categoria"> 
+                    <h4 class="titles-filter"> CATEGORIA</h4>
+                    <label for="">
+                        <input type="checkbox" value="CONSOLA" class="filter category-filter"> 
+                        CONSOLA
+                    </label>
+                    <label for="">
+                    <input type="checkbox" value="NOTEBOOK"  class="filter category-filter">
+                    NOTEBOOK
+                </label>
+                <label for="">
+                    <input type="checkbox" value="CAMARA"  class="filter category-filter">
+                    CAMARA
+                </label>
+                <label for="">
+                    <input type="checkbox" value="CELULAR"  class="filter category-filter">
+                    CELULAR
+                </label>
+                <label for="">
+                    <input type="checkbox" value="ACCESORIOS" class="filter category-filter">
+                    ACCESORIOS
+                </label>
+                </div>
                 <div class="busqueda">
 
 
-                    <h3> BÚSQUEDA </h3>
-                    <input type="text" id="filtro" />
+                    <h4 class="titles-filter"> BÚSQUEDA </h4>
+                    <input type="text" class="search-box" id="filtro" />
 
                     <label> <i class="fas fa-search"> </i> </label>
 
                 </div>
 
-                <h3 class="filter-name">PUNTAJE</h3>
+                <h4 class="titles-filter">PUNTAJE</h4>
                 <label>
                     <input type="checkbox" name="review" class="filter review-filter" value="5" id="checkbox-5" />
                     <div class="review">
@@ -150,6 +175,7 @@
                     <p class="info-mostrar"> MOSTRANDO PRODUCTOS</p>
 
                         <div class="boton-grilla-lista">
+                            <p>Ver como</p> 
                              <button> <i class="fas fa-th"></i> </button>
                              <button> <i class="fas fa-th-list"></i> </button>
                         </div>
@@ -162,13 +188,13 @@
                 <div class="contenedor-tarjetas">
 
 
-                    <article class="product" data-nombre="hp" data-categoria="auriculares" data-precio="22499"
+                    <article class="product" data-nombre=" Headphones Philips" data-categoria="Headphones" value="ACCESORIOS" data-precio="22499"
                         data-rating="4">
                         <div class="product-img-container">
                             <img src="./imagenes/auriculares-2.jpeg" class="product-img" />
                         </div>
                         <div class="product-body">
-                            <h3 class="product-name">Auriculares</h3>
+                            <h3 class="product-name">Headphones Philips</h3>
                             <p class="product-price">$ 22499</p>
                             <div class="review">
                                 <i class="fas fa-star"></i>
@@ -180,7 +206,7 @@
                         </div>
                     </article>
 
-                    <article class="product" data-nombre="sony" data-categoria="auriculares" data-precio="22499"
+                    <article class="product" data-nombre="Auriculares" data-categoria="auriculares" data-precio="22499"
                         data-rating="3">
                         <div class="product-img-container">
                             <img src="./imagenes/auriculares.jpeg" class="product-img" />
@@ -198,13 +224,13 @@
                         </div>
                     </article>
 
-                    <article class="product" data-nombre="nikon" data-categoria="camara" data-precio="22499"
+                    <article class="product" data-nombre="Camara Nikon" data-categoria="Camara" data-precio="22499"
                         data-rating="3">
                         <div class="product-img-container">
                             <img src="./imagenes/camara.jpeg" class="product-img" />
                         </div>
                         <div class="product-body">
-                            <h3 class="product-name">Camara</h3>
+                            <h3 class="product-name">Camara Nikon</h3>
                             <p class="product-price">$ 22499</p>
                             <div class="review">
                                 <i class="fas fa-star"></i>
@@ -218,7 +244,7 @@
 
 
 
-                    <article class="product" data-nombre="motorola" data-categoria="celulares" data-precio="22499"
+                    <article class="product" data-nombre="Motorola" data-categoria="Celular" data-precio="22499"
                         data-rating="3">
                         <div class="product-img-container">
                             <img src="./imagenes/celular.jpeg" class="product-img" />
@@ -238,13 +264,13 @@
 
 
 
-                    <article class="product" data-nombre="hp" data-categoria="mouse" data-precio="22499"
+                    <article class="product" data-nombre="Mouse Gamer" data-categoria="Mouse" data-precio="22499"
                         data-rating="2">
                         <div class="product-img-container">
                             <img src="./imagenes/mouse.jpeg" class="product-img" />
                         </div>
                         <div class="product-body">
-                            <h3 class="product-name">Mouse</h3>
+                            <h3 class="product-name">Mouse gamer</h3>
                             <p class="product-price">$ 22499</p>
                             <div class="review">
                                 <i class="fas fa-star"></i>
@@ -257,18 +283,18 @@
                     </article>
 
 
-                    <article class="product" data-nombre="consola" data-categoria="nintendo" data-precio="22499"
-                        data-rating="1">
+                    <article class="product" data-nombre="Nintendo Switch" data-categoria="Nintendo" data-precio="22499"
+                        data-rating="3">
                         <div class="product-img-container">
                             <img src="./imagenes/nintendo.jpeg" class="product-img" />
                         </div>
                         <div class="product-body">
-                            <h3 class="product-name">Nintendo </h3>
+                            <h3 class="product-name">Nintendo Switch </h3>
                             <p class="product-price">$ 22499</p>
                             <div class="review">
                                 <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
                             </div>
@@ -277,7 +303,7 @@
 
 
                     <article class="product" data-nombre="dell" data-categoria="notebook" data-precio="22499"
-                        data-rating="1">
+                        data-rating="3">
                         <div class="product-img-container">
                             <img src="./imagenes/notebook-2.jpeg" class="product-img" />
                         </div>
@@ -286,8 +312,8 @@
                             <p class="product-price">$ 22499</p>
                             <div class="review">
                                 <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
                             </div>
@@ -295,7 +321,7 @@
                     </article>
 
                     <article class="product" data-nombre="hp" data-categoria="notebook" data-precio="22499"
-                        data-rating="1">
+                        data-rating="2">
                         <div class="product-img-container">
                             <img src="./imagenes/notebook-3.jpeg" class="product-img" />
                         </div>
@@ -313,7 +339,7 @@
                     </article>
 
 
-                    <article class="product" data-nombre="sony" data-categoria="notebook" data-precio="22499"
+                    <article class="product" data-nombre="sony" data-categoria="notebook" data-precio="32499"
                         data-rating="1">
                         <div class="product-img-container">
                             <img src="./imagenes/notebook.jpeg" class="product-img" />
@@ -331,8 +357,8 @@
                         </div>
                     </article>
 
-                    <article class="product" data-nombre="consola" data-categoria="PlayStation" data-precio="22499"
-                        data-rating="1">
+                    <article class="product" data-nombre="consola" data-categoria="PlayStation" data-precio="56499"
+                        data-rating="4">
                         <div class="product-img-container">
                             <img src="./imagenes/ps4.jpeg" class="product-img" />
                         </div>
@@ -351,19 +377,19 @@
 
 
 
-                    <article class="product" data-nombre="consola" data-categoria="xbox" data-precio="22499"
-                        data-rating="1">
+                    <article class="product" data-nombre="Xbox one" data-categoria="consola" data-precio="68959"
+                        data-rating="4">
                         <div class="product-img-container">
                             <img src="./imagenes/xbox.jpeg" class="product-img" />
                         </div>
                         <div class="product-body">
-                            <h3 class="product-name">Xbox </h3>
-                            <p class="product-price">$ 22499</p>
+                            <h3 class="product-name">Xbox one </h3>
+                            <p class="product-price">$ 68959</p>
                             <div class="review">
                                 <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                             </div>
                         </div>
@@ -371,7 +397,7 @@
 
 
                     <article class="product" data-nombre="iphone" data-categoria="celular" data-precio="22499"
-                        data-rating="1">
+                        data-rating="5">
                         <div class="product-img-container">
                             <img src="./imagenes/iphone.jpeg" class="product-img" />
                         </div>
@@ -380,10 +406,10 @@
                             <p class="product-price">$ 22499</p>
                             <div class="review">
                                 <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
                         </div>
                     </article>

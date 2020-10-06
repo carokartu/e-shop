@@ -1,7 +1,7 @@
 const filtroNombre = document.querySelector('#filtro');
 const tarjetas = document.getElementsByClassName('product');
 const filtroRating = document.getElementsByClassName('review-filter');
- 
+
 // cuando se escriba algo en el input
 filtroNombre.oninput = () => {
   // recorro una a una cada tarjeta
@@ -20,6 +20,9 @@ filtroNombre.oninput = () => {
   }
 };
 
+
+
+
 // recorro uno a uno los checkbox
 for (let checkbox of filtroRating) {
   // si le hacen clic a uno de los checkbox
@@ -35,45 +38,71 @@ for (let checkbox of filtroRating) {
         } else {
           tarjeta.classList.add('hidden');
         }
-        
+
         // si el checkbox NO esta seleccionado... 
-      } else {
+      } 
+      else {
         tarjeta.classList.remove('hidden');
       }
     }
   };
 }
 
+const filtroCategoria = document.getElementsByClassName(`category-filter`);
+
+
+for (let checkbox of filtroCategoria) {
+
+  checkbox.onclick = () => {
+    for (let tarjeta of tarjetas){
+      if (checkbox.cheked) {
+        const category = tarjeta.dataset.value;
+        console.log(category)
+        if (checkbox.value === category) {
+
+          tarjeta.classList.remove('hidden');
+        } else {
+          tarjeta.classList.add('hidden');
+        }
+     
+      }
+      else {
+        tarjeta.classList.remove('hidden');
+      }
+    }
+  }
+}
+
 
 const boton = document.getElementById('limpiar')
-const busqueda = document.getElementById(`filtro`) 
-const checkboxes = document.querySelectorAll (`review-filter`) 
+const busqueda = document.getElementById(`filtro`)
+const checkboxes = document.querySelectorAll(`review-filter`)
 
 
 const limpiarFiltro = () => {
- 
+
   busqueda.value = ``
 }
 
 
 const limpiarCheck = () => {
 
-  for ( let checkbox of checkboxes) {
+  for (let checkbox of checkboxes) {
 
-    checkbox.checked = false 
-}
+    checkbox.checked = false
+  }
 }
 
 
 boton.onclick = () => {
 
-limpiarFiltro() 
+  limpiarFiltro()
 
-console.log (limpiarFiltro()) 
+  console.log(limpiarFiltro())
 
-limpiarCheck ()
+  limpiarCheck()
 
-console.log (limpiarCheck()) 
+  console.log(limpiarCheck())
 }
 
 

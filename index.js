@@ -121,7 +121,7 @@ const carritoAbierto = document.querySelector(".cart-open")
 
 console.log(carritoAbierto)
 
-const overlay = document.getElementById("overlay")
+const overlay = document.getElementById("overlay ocultar")
 
 console.log(overlay)
 
@@ -135,5 +135,5 @@ botonAbrirCarrito.onclick = () => {
 botonCerrarCarrito.onclick = () => {
   overlay.classList.add("ocultar")
   document.body.classList.remove("no-scroll")
-  carritoAbierto.classList.remove("abrir-carrito")
+  carritoAbierto.classList.rempve("abrir-carrito")
 }

@@ -446,50 +446,67 @@
 
     <!-- ----------COMIENZO DE CARRITO------------- -->
 
-    <section class="cart overlay"  id="overlay">
-     <div class="cart-open">             
+    <section class="cart overlay ocultar" id="overlay ocultar">
+        <div class="cart-open">
 
-        <header>
-            <h2> Carrito </h2>
-            <button type="button" class="close-cart" aria-label="cerrar carrito">
-                <i class="far fa-times-circle" aria-hidden="true"></i>
-            </button>
-        </header>
+            <header>
+                <h2> Carrito </h2>
+                <button type="button" class="close-cart" aria-label="cerrar carrito">
+                    <i class="far fa-times-circle" aria-hidden="true"></i>
+                </button>
+            </header>
 
-        <div class="cart-products">
-            <p class="cart-added"> 2 producto(s) agregado(s) </p>
-            <article class="product" data-nombre="Mouse Gamer" data-categoria="Mouse" data-value="ACCESORIOS"
-                data-precio="22499" data-rating="2">
-                <!-- <div class="product-img-cart"> -->
-                <!-- ESTILO PARA CARRITO 
-                <img src="./imagenes/mouse.jpeg" class="product-img" /> -->
-                <!-- </div> -->
-                <div class="cart-product">
-                    <!-- ESTILO PARA CARRITO  -->
-                    <div class="product-info">
-                        <h3 class="product-name">Mouse gamer</h3>
-                        <button type="button" class="delete-product">
-                            <i class="far fa-trash-alt"></i>
-                        </button>
+            <div class="cart-products">
+                <p class="cart-added"> 2 producto(s) agregado(s) </p>
+                <article class="product-cart" data-nombre="Mouse Gamer" data-categoria="Mouse" data-value="accesorios"
+                    data-precio="22499" data-rating="2">
+                    <img src="./imagenes/mouse.jpeg" class="product-img" id="img-cart" />
+                    <div class="cart-product">
+                        <div class="product-info">
+                            <h3 class="product-name">Mouse gamer</h3>
+                            <button type="button" class="delete-product">
+                                <i class="far fa-trash-alt"></i>
+                            </button>
+                        </div>
+                        <div class="price-number-product">
+                            <label>
+                                <input class="product-label-cart" type="number" value="1" id="">
+
+                                unidades
+                            </label>
+                            <p class="product-price">$ 22499</p>
+                        </div>
                     </div>
 
-                    <div class="price-remove-product">
-                        <label>
-                            <input type="number" value="1" id="">
+                </article>
+<!-- 
+                <div class="cart-products"> -->
 
-                            unidades
-                        </label>
-                        <p class="product-price">$ 22499</p>
+                    <article class="product-cart" data-nombre="PlayStation" data-categoria="PlayStation"
+                        data-value="consola" data-precio="56499" data-rating="4">
+                        <img src="./imagenes/ps4.jpeg" class="product-img" id="img-cart" />
+                        <div class="cart-product">
+                            <div class="product-info">
+                                <h3 class="product-name">PlayStation 4 </h3>
+                                <button type="button" class="delete-product">
+                                    <i class="far fa-trash-alt"></i>
+                                </button>
+                            </div>
+                            <div class="price-number-product">
+                                <label>
+                                    <input class="product-label-cart" type="number" value="1" id="">
 
-                    </div>
-                </div>
+                                    unidades
+                                </label>
+                                <p class="product-price">$ 22499</p>
+
+                                </p>
+
+                            </div>
+                        </div>
+                
                 </article>
 
-
-                </p>
-            </div>      
-        </div>
-        </div>
     </section>
 
 

@@ -104,7 +104,7 @@ body {
  .pagina{
   display: flex;
   margin-top: 35px;
-  overflow: hidden;
+ 
 }
 
 
@@ -187,6 +187,12 @@ label input {
 
 /* ----------------------------INICIO DE TARJETAS ----------------------------*/
 
+
+.section{
+  width: 100%
+
+}
+
 img{
   display: block;
 }
@@ -215,6 +221,9 @@ img{
 
 .info-productos {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 }
 
 .product-name{
@@ -259,7 +268,7 @@ margin-top: 5px;
   display: flex;
 
   align-items: center;
-  margin-left: 523px;
+  
 }
 .fas.fa-th,.fas.fa-th-list{
   font-size: 20px;
@@ -275,7 +284,6 @@ margin-top: 5px;
     width: 100%; 
     display: flex;
     flex-wrap:wrap;
-    height: 2000px;
    }
 
 .tarjetas{

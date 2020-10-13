@@ -55,7 +55,7 @@ for (let checkbox of filtroCategoria) {
 
   checkbox.onclick = () => {
     for (let tarjeta of tarjetas){
-      if (checkbox.cheked) {
+      if (checkbox.checked) {
         const category = tarjeta.dataset.value;
         console.log(category)
         if (checkbox.value === category) {

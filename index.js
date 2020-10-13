@@ -135,5 +135,5 @@ botonAbrirCarrito.onclick = () => {
 botonCerrarCarrito.onclick = () => {
   overlay.classList.add("ocultar")
   document.body.classList.remove("no-scroll")
-  carritoAbierto.classList.rempve("abrir-carrito")
+  carritoAbierto.classList.remove("abrir-carrito")
 }

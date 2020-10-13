@@ -25,6 +25,10 @@
 
         <button class="boton-carrito">
             <i class="fas fa-shopping-cart"></i>
+
+            <p class="cart-items">
+                Carrito (2 items)
+            </p>
         </button>
 
 
@@ -68,10 +72,20 @@
                     <h3>FILTROS</h3>
 
 
-                    <button id="limpiar"> <i class="fas fa-trash-alt"> </i> </button>
-                    <P>limpiar</P>
+                    <button id="limpiar"> <i class="fas fa-trash-alt"> </i>
+                        Limpiar
+                    </button>
+                </div>
+                <div class="busqueda">
+
+
+                    <h4 class="titles-filter"> BÚSQUEDA </h4>
+                    <input type="text" class="search-box" id="filtro" />
+
+                    <label> <i class="fas fa-search"> </i> </label>
 
                 </div>
+
 
                 <div class="categoria">
                     <h4 class="titles-filter"> CATEGORIA</h4>
@@ -96,16 +110,7 @@
                         ACCESORIOS
                     </label>
                 </div>
-                <div class="busqueda">
-
-
-                    <h4 class="titles-filter"> BÚSQUEDA </h4>
-                    <input type="text" class="search-box" id="filtro" />
-
-                    <label> <i class="fas fa-search"> </i> </label>
-
-                </div>
-
+               
                 <h4 class="titles-filter">PUNTAJE</h4>
                 <label>
                     <input type="checkbox" name="review" class="filter review-filter" value="5" id="checkbox-5" />
@@ -439,6 +444,13 @@
     </div>
 
     <footer>
+        <div class="footer-page"> 
+            <img class="logo-ada" src="./imagenes/ada.svg" alt="">
+            <p class="footer-parrafo"> 
+                ADA SHOP Gracias por visitarnos
+             Si llegaste hasta aca, significa que termine el proyecto con vida</p>
+
+        </div>
 
     </footer>
 
@@ -479,35 +491,36 @@
                     </div>
 
                 </article>
-<!-- 
+                <!-- 
                 <div class="cart-products"> -->
 
-                    <article class="product-cart" data-nombre="PlayStation" data-categoria="PlayStation"
-                        data-value="consola" data-precio="56499" data-rating="4">
-                        <img src="./imagenes/ps4.jpeg" class="product-img" id="img-cart" />
-                        <div class="cart-product">
-                            <div class="product-info">
-                                <h3 class="product-name">PlayStation 4 </h3>
-                                <button type="button" class="delete-product">
-                                    <i class="far fa-trash-alt"></i>
-                                </button>
-                            </div>
-                            <div class="price-number-product">
-                                <label>
-                                    <input class="product-label-cart" type="number" value="1" id="">
-
-                                    unidades
-                                </label>
-                                <p class="product-price">$ 22499</p>
-
-                                </p>
-
-                            </div>
+                <article class="product-cart" data-nombre="PlayStation" data-categoria="PlayStation"
+                    data-value="consola" data-precio="56499" data-rating="4">
+                    <img src="./imagenes/ps4.jpeg" class="product-img" id="img-cart" />
+                    <div class="cart-product">
+                        <div class="product-info">
+                            <h3 class="product-name">PlayStation 4 </h3>
+                            <button type="button" class="delete-product">
+                                <i class="far fa-trash-alt"></i>
+                            </button>
                         </div>
-                
+                        <div class="price-number-product">
+                            <label>
+                                <input class="product-label-cart" type="number" value="1" id="">
+
+                                unidades
+                            </label>
+                            <p class="product-price">$ 22499</p>
+
+                            </p>
+
+                        </div>
+                    </div>
+
                 </article>
 
     </section>
+
 
 
     <script src="index.js"></script>

@@ -2,14 +2,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&family=Staatliches&display=swap');
 /* ESTILOS GENERALES  */
 
 *{
   box-sizing: border-box;
   position: relative;
   margin: 0px;
-  
+  font-size: 14px;
+  font-weight: bold;
 }
 
 
@@ -60,14 +61,26 @@ label {
 
 /* ----------------CARRITO-------------------- */
 .fas.fa-shopping-cart { 
-  font-size: 30px; 
-  padding: 30px;
-  
+  padding-top: 30px;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 .boton-carrito{
   background-color: transparent;
+  display: flex;
   
 } 
+
+.cart-items{
+    text-align: center;
+    text-align: center;
+    padding-top: 30px;
+    padding-left: 15px;
+    font-size: 17px;
+    font-weight: lighter;
+}
+
 
 /* ----------------TITULO-------------------- */
 
@@ -105,6 +118,8 @@ label {
     font-weight: 900;
     
 }
+
+
 /* 
 ----------------FIN DE NAV Y TITULO-------------------- */
 
@@ -144,20 +159,30 @@ label {
  .titles-filter {
   padding-bottom: 15px;
   padding-top: 15px;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: bolder;
 }
 
 .filtros { 
 
-    width: 260px;
-    margin-left: 5px;
-    padding: 15px 0px 0px 0px;
+  width: 260px;
+  margin-left: 5px;
+  padding-top: 15px;
+  padding: 25px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
     
 }
 
 .div-filtros{
     display: flex;
+}
+
+.filtros-limpieza{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
 }
 /* 
 ----------------ASIDE-------------------- */
@@ -341,6 +366,42 @@ margin-top: 5px;
     transform: scale(1.5);
     opacity: 0.7;
   }
+/* ------------------------------INICIO DE FOOTER------------------------ */
+
+footer{
+    background: #fafafa;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    padding: 50px;
+}
+.footer-parrafo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+
+.footer-page{
+  
+    background: #fafafa;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+/* ------------------------------FIN DE FOOTER------------------------ */
+
+
+
+
   .hidden {
     display: none;
   }
@@ -438,9 +499,6 @@ display: flex;
     justify-content: space-between;
 }
 
-.product-price{
-  margin-left: 20px;
-}
 
 .abrir-carrito {
   transform: translate(0px)
@@ -516,8 +574,8 @@ display: flex;
     }
 
     .buy-button{
-      width: 50%;
-      margin-left: 148px;
+      width: 100%;
+      
     }
 }
 

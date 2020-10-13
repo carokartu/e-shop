@@ -94,19 +94,46 @@ const limpiarCheck = () => {
 }
 
 
-boton.onclick = () => {
+// boton.onclick = () => {
 
-  limpiarFiltro()
+//   limpiarFiltro()
 
-  console.log(limpiarFiltro())
+//   console.log(limpiarFiltro())
 
-  limpiarCheck()
+//   limpiarCheck()
 
-  console.log(limpiarCheck())
+//   console.log(limpiarCheck())
+// }
+
+
+
+// ----------------CARRITO---------------
+
+
+const botonAbrirCarrito = document.querySelector(".boton-carrito")
+
+console.log(botonAbrirCarrito)
+
+const botonCerrarCarrito = document.querySelector(".close-cart")
+console.log(botonCerrarCarrito)
+
+const carritoAbierto = document.querySelector(".cart-open")
+
+console.log(carritoAbierto)
+
+const overlay = document.getElementById("overlay")
+
+console.log(overlay)
+
+
+botonAbrirCarrito.onclick = () => {
+  overlay.classList.remove("ocultar")
+  document.body.classList.add("no-scroll")
+  carritoAbierto.classList.add("abrir-carrito")
 }
 
-
-
-
-
-
+botonCerrarCarrito.onclick = () => {
+  overlay.classList.add("ocultar")
+  document.body.classList.remove("no-scroll")
+  carritoAbierto.classList.remove("abrir-carrito")
+}

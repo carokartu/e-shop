@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap');
 /* ESTILOS GENERALES  */
 
 *{
@@ -427,13 +427,18 @@ footer{
     z-index: 5000;
 } */
 
-.product-cart{ 
+
+.cart-container{
+  overflow: scroll;
+}
+.cart-article{ 
 
 padding: 10px 0;
 display: flex;
 border-bottom: 1px solid #dedede;
 
 }
+
 
 
 
@@ -485,11 +490,12 @@ border-bottom: 1px solid #dedede;
 }
 
 .cart-product {
-flex-grow: 1;
+  flex-grow: 1;
     padding: 5px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-left: 10px;
 }
 
 .product-info{ 
@@ -516,6 +522,54 @@ display: flex;
 .abrir-carrito {
   transform: translate(0px)
 }
+
+
+.button-container{
+  /* display: flex; */
+}
+
+.subtotal{
+ 
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-size: 15px;
+  margin-top: 15px;
+  padding-bottom: 20px;
+}
+
+.button-buy-clear{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+.buy-button-cart{
+      
+    background-color: #4caf48;
+    height: 50px;
+    border-radius: 20px;
+    margin: 15px 5px 4px 5px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    letter-spacing: 0.6px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+.clean-button-cart{
+  background-color: transparent;
+    border: 1px solid #DF0101;
+    height: 50px;
+    border-radius: 9px;
+    margin: 15px 5px 4px 5px;
+    font-family: 'Montserrat', sans-serif;
+    color: #DF0101;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
 
 .no-scroll {
   overflow: hidden;

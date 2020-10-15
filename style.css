@@ -10,7 +10,8 @@
   position: relative;
   margin: 0px;
   font-size: 14px;
-  font-weight: bold;
+ 
+  font-family: 'Montserrat', sans-serif;
 
 }
 
@@ -56,14 +57,15 @@ label {
 }
 
 .ada-shop{
-  font-size: 20px;
+  font-size: 15px;
+  margin-left: 5px;
 }
 
 
 /* ----------------CARRITO-------------------- */
 .fas.fa-shopping-cart { 
   padding-top: 30px;
-  font-size: 20px;
+  font-size: 13px;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -77,9 +79,9 @@ label {
     text-align: center;
     text-align: center;
     padding-top: 30px;
-    padding-left: 15px;
-    font-size: 17px;
-    font-weight: lighter;
+    padding-left: 8px;
+    font-size: 13px;
+    
 }
 
 
@@ -245,6 +247,7 @@ img{
   font-size: 14px;
 }
 
+
 .contenedor-barra{
 
     background-color: tomato ;
@@ -395,6 +398,18 @@ footer{
     justify-content: center;
 }
 
+
+.tarjetas.grilla{
+
+}
+
+.product.grilla{
+
+}
+
+.contenedor-tarjetas.grilla{
+  
+}
 
 
 
@@ -619,8 +634,13 @@ display: flex;
 @media(max-width : 750px) {
  
 *{
+
   overflow-x: hidden;
 }
+
+  .overlay{
+    width: 100%;
+  }
 
   .barra-productos{
     width: 100%;

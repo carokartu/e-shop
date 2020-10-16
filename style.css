@@ -247,6 +247,9 @@ img{
   font-size: 14px;
 }
 
+.hidden-tarjetas{
+  display: none;
+}
 
 .contenedor-barra{
 
@@ -474,7 +477,7 @@ border-bottom: 1px solid #dedede;
 #img-cart{
   display: block;
   width: 30%;
-  height: 70%; 
+   
 }
 
 .title-cart{
@@ -576,8 +579,8 @@ display: flex;
 
 
 
-------------------------------INICIO MODAL-----------------------
-.checkout {
+/* /* ------------------------------INICIO MODAL------------------------ */
+.checkout { 
   display: flex;
   flex-direction: column;
   position: absolute;

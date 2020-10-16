@@ -138,6 +138,42 @@ const pasaFiltros = (tarjeta) => {
 };
 
 
+//*------------------------LIMPIAR FILTROS ------------------//
+
+
+const limpiar = document.querySelector(".limpiar");
+
+
+limpiar.onclick = () => {
+  filtroNombre.value = "";
+  for (let tarjeta of tarjetas) {
+    tarjeta.classList.remove("hidden");
+  }
+  for (let checkbox of filtroRating) {
+    checkbox.checked = false;
+  }
+  for (let checkbox of filtroCategoria) {
+    checkbox.checked = false;
+  }
+};
+
+
+//*------------------------MOSTRAR PRODUCTOS------------------//
+
+
+const tarjetasVisibles = document.getElementById("productos-visibles")
+
+ const mostrarCantidadDeTarjetas = () => {
+   const tarjetasEscondidas = document.querySelectorAll(".hidden-tarjetas")
+   const longitudDeTarjetasEscondidos = tarjetasEscondidas.length
+   const tarjetasVisibles = 12 - longitudDeTarjetasEscondidos
+
+   longitudDeTarjetasEscondidos.textContent = tarjetasVisibles
+ }
+
+//*------------------------LIMPIAR FILTROS ------------------//
+
+
 // ---------------------GRILLA -------------------
 const botonLista = document.querySelector(".filter-button.list");   
 const botonGrilla = document.querySelector(".filter-button.grid");  

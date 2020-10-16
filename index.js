@@ -29,16 +29,7 @@ for (let checkbox of filtroRating) {
 
 
 //*------------------------FILTRO TARJETAS------------------//
-const filtrarTarjetas = () => {
-  for (let tarjeta of tarjetas) {
-    if (pasaFiltros(tarjeta)) {
-      mostrarTarjetas(tarjeta);
-    } else {
-      ocultarTarjetas(tarjeta);
-    }
-  }
-  mostrarCantidadDeTarjetas()
-};
+
 
 const mostrarTarjetas = (tarjeta) => {
   return tarjeta.classList.remove("hidden");
@@ -99,7 +90,7 @@ const coincideRatingConTarjeta = (tarjeta) => {
   return false;
 };
 
-const filtroInputEscrito = (tarjeta) => {
+const filtroInputNombre = (tarjeta) => {
   if (hayAlgoEscritoEnInput()) {
     return coincideBusquedaInputConTarjeta(tarjeta);
   } else {
@@ -127,7 +118,7 @@ const filtroRatingSeleccionado = (tarjeta) => {
 
 const pasaFiltros = (tarjeta) => {
   if (
-    filtroInputEscrito(tarjeta) == true &&
+    filtroInputNombre(tarjeta) == true &&
     filtroCategoriaSeleccionada(tarjeta) == true &&
     filtroRatingSeleccionado(tarjeta) == true
   ) {
@@ -135,6 +126,17 @@ const pasaFiltros = (tarjeta) => {
   } else {
     return false;
   }
+};
+
+const filtrarTarjetas = () => {
+  for (let tarjeta of tarjetas) {
+    if (pasaFiltros(tarjeta)) {
+      mostrarTarjetas(tarjeta);
+    } else {
+      ocultarTarjetas(tarjeta);
+    }
+  }
+  mostrarCantidadDeTarjetas()
 };
 
 
@@ -165,15 +167,40 @@ const tarjetasVisibles = document.getElementById("productos-visibles")
 
  const mostrarCantidadDeTarjetas = () => {
    const tarjetasEscondidas = document.querySelectorAll(".hidden-tarjetas")
-   const longitudDeTarjetasEscondidos = tarjetasEscondidas.length
-   const tarjetasVisibles = 12 - longitudDeTarjetasEscondidos
+   const longitudDeTarjetasEscondidas = tarjetasEscondidas.length
+   const tarjetasVisibles = 12 - longitudDeTarjetasEscondidas
 
-   longitudDeTarjetasEscondidos.textContent = tarjetasVisibles
+   longitudDeTarjetasEscondidas.textContent = tarjetasVisibles
  }
 
 //*------------------------LIMPIAR FILTROS ------------------//
 
+// ----------------FILTROS RESPONSIVE---------------
 
+
+const botonFiltroResponsive = document.querySelector(".filter-responsive-button")
+
+console.log(botonFiltroResponsive)
+
+const botonCerrarFiltro = document.querySelector(".close-filter-responsive")
+console.log(botonCerrarFiltro)
+
+const filtroAbierto = document.querySelector(".filtros.responsive")
+
+console.log(filtroAbierto)
+
+
+botonFiltroResponsive.onclick = () => {
+  overlay.classList.remove("ocultar")
+  document.body.classList.add("no-scroll")
+  filtroAbierto.classList.add("responsive-abrir")
+}
+
+botonCerrarFiltro.onclick = () => {
+  overlay.classList.add("ocultar")
+  document.body.classList.remove("no-scroll")
+  filtroAbierto.classList.remove("responsive-abrir")
+}
 // ---------------------GRILLA -------------------
 const botonLista = document.querySelector(".filter-button.list");   
 const botonGrilla = document.querySelector(".filter-button.grid");  

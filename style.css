@@ -188,6 +188,10 @@ label {
     align-items: center;
 }
 
+.close-filter-responsive{
+  display: none;
+}
+
 /* 
 ----------------ASIDE-------------------- */
 
@@ -527,7 +531,7 @@ display: flex;
 }
 
 
-.button-container{
+.button-container {
   /* display: flex; */
 }
 
@@ -665,7 +669,7 @@ display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 15px;
-  background-color: #red;
+  background-color: red;
   min-width: 300px;
 
 }
@@ -762,6 +766,51 @@ padding: 80px 10px 30px;
 
   .product {
      width:  46.5%;}
+
+  
+  .filter-button{
+      display: none;
+    }
+
+  .description-filter{
+
+      display: none;
+    }
+  
+    .close-filter-responsive{
+    display: flex;
+  }
+
+  .filter-responsive-button{
+    display: flex;
+  }
+
+
+  .responsive-abir{
+    transform: translateX(0px);
+  }
+  
+  .filtros.reponsive-estilos{
+    transform: translate(0px);
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    padding: 40px 20px;
+    background-color: #fff;
+    border-left: 1px solid #dedede;
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s;
+    z-index: 5000;
+  }
+
+  .close-filter-responsive{
+    display: flex;
+  }
 }
 
 
@@ -780,7 +829,7 @@ padding: 80px 10px 30px;
   }
 
   .barra-productos{
-    width: 100%;
+    width: 96%;
   }
 
   .contenedor-tarjetas {
@@ -793,15 +842,10 @@ padding: 80px 10px 30px;
 
   
     .product {
-       width:  100%;
+       width:  96%;
       }
 
-      .filter-button{
-        display: none;
-      }
-    .filter-responsive{
-      display: flex;
-    }
+     
 
     .buy-button{
       width: 100%;

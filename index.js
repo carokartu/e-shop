@@ -150,8 +150,6 @@ botonLista.onclick = () => {
   
 }
 
-console.log(botonLista("estoy haciendo click"))
-
 
 
 
@@ -186,10 +184,31 @@ botonCerrarCarrito.onclick = () => {
   document.body.classList.remove("no-scroll")
   carritoAbierto.classList.remove("abrir-carrito")
 }
+// -------------------MODAL-------------------
+
+const botonIrAModal = document.getElementById("comprar-checkout-modal")
+const overlayModal = document.getElementById("overleyModal")
+const botonSeguirComprando = document.querySelector(".seguir-comprando")
+
+botonIrAModal.onclick  = () => {
+  overlayModal.classList.remove("hidden")
+  document.body.classList.add("no-scroll")
+}
+console.log(botonIrAModal)
 
 
+botonSeguirComprando.onclick = () => {
+  overlayModal.classList.add("hidden")
+  document.body.classList.remove("no-scroll")
+
+}
+
+console.log(botonSeguirComprando)
 
 // -------------------MODAL-------------------
+
+
+
 
 
 const mostrarSubtotal = document.querySelector("#subtotal")

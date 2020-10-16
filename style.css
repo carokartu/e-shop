@@ -576,6 +576,160 @@ display: flex;
 
 
 
+------------------------------INICIO MODAL-----------------------
+.checkout {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  border: 1px solid grey;
+  background-color: #fafafa;
+  width: 500px;
+  height: 500px;
+  padding: 15px;
+    left: 50%;
+  top: 50%;
+  z-index: 3;
+ 
+}
+
+
+
+
+.contenedor-title-checkout {
+  border: 1px solid rgb(19, 165, 243);
+}
+
+.titulo{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
+.main-checkout {
+  background-color: hotpink;
+  display: flex;
+}
+
+.datos-form{
+  
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.datos-usuario{
+  padding: 20px 0;
+  flex-grow: 1;
+}
+
+.datos-personales {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.nombre-usuario{
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.pago {
+  
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.opciones-pago{
+  font-size: 13px;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+
+.pago label {
+  padding: 2px 0;
+}
+
+.pago label input {
+  padding: 2px 0;
+}
+
+.resumen-pago{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #red;
+  min-width: 300px;
+
+}
+
+.titulo-resumen{
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+
+.footer-checkout {
+  display: flex;
+justify-content: flex-end;
+padding: 80px 10px 30px;
+
+}
+
+.seguir-comprando {
+  height: 50px;
+  width: 200px;
+  margin: 0 10px;
+  border: none;
+  background-color: #fafafa;
+  border-radius: 5px;
+  transition: 0.8s;
+}
+
+.finalizar-compra {
+  width: 200px;
+  height: 50px;
+  margin: 0 10px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  transition: 0.8s;
+}
+
+.seguir-comprando:hover {
+  background-color: green;
+}
+
+.finalizar-compra:hover {
+  background-color: yellow;
+}
+
+
+.descuento {
+  color: green;
+}
+
+.recargo {
+  color: red;
+}
+
+
+/* hr {
+  margin: 25px 8px;
+} */
+
+
+
+
+
+
+
+/* ------------------------------FIN MODAL----------------------- */
 
 /* ------------------------------INICIO DE RESPONSIVE------------------------ */
 

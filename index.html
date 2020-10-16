@@ -454,10 +454,78 @@
     </footer>
 
 
+  <!--  -------------------------------INICIO DE CARRITO ------------------------ k -->
 
-    <!-- ----------COMIENZO DE CARRITO------------- -->
+<section class="overlay ocultar" id="overlay ocultar" >
 
-    <section class="cart overlay ocultar" id="overlay ocultar">
+  <div class="cart-container">
+      <p class="cart-added"> 2 producto(s) agregado(s) </p>
+      <article class="cart-article" data-nombre="Mouse Gamer" data-categoria="Mouse" data-value="accesorios"
+          data-precio="22499" data-rating="2">
+          <img src="./imagenes/mouse.jpeg" class="product-img" id="img-cart" />
+          <div class="cart-product">
+              <div class="product-info">
+                  <h3 class="product-name">Mouse gamer</h3>
+                  <button type="button" class="delete-product">
+                      <i class="far fa-trash-alt"></i>
+                  </button>
+              </div>
+              <div class="price-number-product">
+                  <label>
+                      <input class="product-label-cart" type="number" value="1" id="">
+
+                      unidades
+                  </label>
+                  <p class="product-price">$ 22499</p>
+              </div>
+          </div>
+
+      </article> 
+           
+
+      <article class="cart-article" data-nombre="PlayStation" data-categoria="PlayStation" data-value="consola"
+          data-precio="56499" data-rating="4">
+          <img src="./imagenes/ps4.jpeg" class="product-img" id="img-cart" />
+          <div class="cart-product">
+              <div class="product-info">
+                  <h3 class="product-name">PlayStation 4 </h3>
+                  <button type="button" class="delete-product">
+                      <i class="far fa-trash-alt"></i>
+                  </button>
+              </div>
+              <div class="price-number-product">
+                  <label>
+                      <input class="product-label-cart" type="number" value="1" id="">
+
+                      unidades
+                  </label>
+                  <p class="product-price">$ 22499</p>
+                  </p>
+              </div>
+
+          </div>
+  </div>
+  </article>
+  <div class="button-container">
+      <p class="subtotal">Subtotal $4988</p>
+
+      <div class="button-buy-clear">
+          <button type="button" class="buy-button-cart" id="comprar-checkout-modal">
+              Comprar
+          </button>
+
+          <button type="button" class="clean-button-cart">
+              Vaciar
+          </button>
+      </div>
+  </div>
+</section> 
+
+
+
+    <!-- ----------COMIENZO DE MODAL------------- -->
+
+    <section class="cart overlay ocultar" id="overleyModal">
         <div class="cart-open">
 
             <header>
@@ -468,15 +536,15 @@
             </header>
 
             <article class="modal-checkout" id="modal-checkout">
-                <div class="header-checkout">
-                    <h2 class=> Checkout </h2>
+                <div class="contenedor-titulo-checkout">
+                    <h2 class="titulo"> Checkout </h2>
                 </div>
 
                 <div class="checkout">
                     <form action="" class="datos-form">
-                        <div class="datos-personales">
-                            <h3> Datos Personales</h3>
-                            <h2> Nombre y Apellido * </h2>
+                        <div class="datos-usuario">
+                            <h3 class="datos-personales"> Datos Personales</h3>
+                            <h2 class="nombre-usuario"> Nombre y Apellido * </h2>
                             <label for="nombre">
                                 <input type="text" name="nombre" id="nombre" class="input-checkout"
                                     placeholder="p. ej.: Regina Phalange" required>
@@ -496,7 +564,7 @@
 
                         <hr />
                         <div class="pago">
-                            <h3> Opciones de pago </h3>
+                            <h3 class="opciones-pago"> Opciones de pago </h3>
                             <label for="input-efectivo">
                                 <input type="radio" name="forma-de-pago" id="input-efectivo" value="efectivo-debito">
                                 Efectivo/Debito
@@ -521,8 +589,8 @@
                     </form>
 
                     <div class="resumen-pago">
-                        <div class="header-resumen">
-                            <h3>
+                        <div>
+                            <h3 class="titulo-resumen">
                                 Resumen
                             </h3>
 
@@ -553,7 +621,7 @@
                 </div>
 
                 <div class="footer-checkout">
-                    <button id="cerrar-checkout" class="seguir-comprando">
+                    <button id="seguir-comprando" class="seguir-comprando">
                         SEGUIR COMPRANDO
 
 
@@ -568,71 +636,8 @@
         </div>
 
 
-        <!-- -------------------------------INICIO DE CARRITO ------------------------
-
-        <div class="cart-container">
-            <p class="cart-added"> 2 producto(s) agregado(s) </p>
-            <article class="cart-article" data-nombre="Mouse Gamer" data-categoria="Mouse" data-value="accesorios"
-                data-precio="22499" data-rating="2">
-                <img src="./imagenes/mouse.jpeg" class="product-img" id="img-cart" />
-                <div class="cart-product">
-                    <div class="product-info">
-                        <h3 class="product-name">Mouse gamer</h3>
-                        <button type="button" class="delete-product">
-                            <i class="far fa-trash-alt"></i>
-                        </button>
-                    </div>
-                    <div class="price-number-product">
-                        <label>
-                            <input class="product-label-cart" type="number" value="1" id="">
-
-                            unidades
-                        </label>
-                        <p class="product-price">$ 22499</p>
-                    </div>
-                </div>
-
-            </article> -->
-        <!--            
-
-            <article class="cart-article" data-nombre="PlayStation" data-categoria="PlayStation" data-value="consola"
-                data-precio="56499" data-rating="4">
-                <img src="./imagenes/ps4.jpeg" class="product-img" id="img-cart" />
-                <div class="cart-product">
-                    <div class="product-info">
-                        <h3 class="product-name">PlayStation 4 </h3>
-                        <button type="button" class="delete-product">
-                            <i class="far fa-trash-alt"></i>
-                        </button>
-                    </div>
-                    <div class="price-number-product">
-                        <label>
-                            <input class="product-label-cart" type="number" value="1" id="">
-
-                            unidades
-                        </label>
-                        <p class="product-price">$ 22499</p>
-                        </p>
-                    </div>
-
-                </div>
-        </div>
-        </article>
-        <div class="button-container">
-            <p class="subtotal">Subtotal $4988</p>
-
-            <div class="button-buy-clear">
-                <button type="button" class="buy-button-cart">
-                    Comprar
-                </button>
-
-                <button type="button" class="clean-button-cart">
-                    Vaciar
-                </button>
-            </div>
-        </div>
-    </section> -->
-
+      
+    </section>
 
 
         <script src="index.js"></script>

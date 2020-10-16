@@ -370,6 +370,23 @@ margin-top: 5px;
     transform: scale(1.5);
     opacity: 0.7;
   }
+
+/* 
+  .tarjetas.grilla{
+
+    background-color: green
+  
+  }
+  
+  .product.grilla{
+  
+    background-color: red;
+  }
+  
+  .contenedor-tarjetas.grilla{
+   
+    background-color: yellow;
+  } */
 /* ------------------------------INICIO DE FOOTER------------------------ */
 
 footer{
@@ -399,17 +416,6 @@ footer{
 }
 
 
-.tarjetas.grilla{
-
-}
-
-.product.grilla{
-
-}
-
-.contenedor-tarjetas.grilla{
-  
-}
 
 
 
@@ -427,23 +433,6 @@ footer{
 
 /* ------------------------------INICIO DE CARRITO------------------------ */
 
-/* .cart{
-    width: 100%;
-    height: 100%;
-    max-width: 400px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    transform: translateX(100%);
-    padding: 40px 20px;
-    background-color: #fff;
-    border-left: 1px solid #dedede;
-    display: flex;
-    flex-direction: column;
-    transition: 0.2s;
-    z-index: 5000;
-} */
-
 
 .cart-container{
   overflow: scroll;
@@ -455,9 +444,6 @@ display: flex;
 border-bottom: 1px solid #dedede;
 
 }
-
-
-
 
 .cart-open{
   width: 100%;
@@ -483,15 +469,12 @@ border-bottom: 1px solid #dedede;
   position: absolute;
   top: 0;
   bottom: 0;
-
 }
-
 
 #img-cart{
   display: block;
   width: 30%;
   height: 70%; 
-
 }
 
 .title-cart{
@@ -587,9 +570,6 @@ display: flex;
     font-size: 11px;
 }
 
-
-
-
 .ocultar {
   display: none;
 }
@@ -650,7 +630,7 @@ display: flex;
     display: flex;
     width: 100%;
     flex-direction: column;
-    height: 3500px;
+  
    
   }
 

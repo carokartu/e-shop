@@ -4,175 +4,155 @@ const filtroRating = document.getElementsByClassName('review-filter');
 const filtroCategoria = document.getElementsByClassName(`category-filter`);
 
 
+//*----------------------CATEGORIA------------------------------*//
 
+for (let checkbox of filtroCategoria) {
+  checkbox.oninput = () => {
+    filtrarTarjetas();
+  };
+}
 
+//*-----------------------NOMBRE-----------------------*//
 
-// ---------------------------- FILTRO NOMBRE -------------------------
 
 filtroNombre.oninput = () => {
-  
-  for (let tarjeta of tarjetas) {
-    const titulo = tarjeta.dataset.nombre;
-    const busqueda = filtroNombre.value;
-    
-    
-    if (titulo.includes(busqueda.toLowerCase())) {
-      
-      tarjeta.classList.remove('hidden');
-    } else {
-    
-      tarjeta.classList.add('hidden');
-    }
-  }
+  filtrarTarjetas();
 };
 
-
-
-// const filtrarTarjetaPorNombre = (tarjeta) => {
-//   const nombreTarjeta = tarjeta.dataset.nombre;
-//   const busqueda = filtroNombre.value;
-    
-//   if (nombreTarjeta.includes(busqueda.value.toLowerCase())){
-//     return true }
-//     else {
-//       return false 
-//     }
-    
-//   }
-
-// console.log(filtrarTarjetaPorNombre);
-//  ---------------------------FILTRO RATING ----------------------
-
-  // const ratingChequeado = () => {
-  //   for (let checkbox of filtroRating) {
-  //     if (checkbox.checked) {
-  //       return true
-  //     }
-  //     else {
-  //       return false 
-  //     }
-  //   }
-  // }
- 
- 
-
-
-
+//*------------------------RATING------------------//
 
 for (let checkbox of filtroRating) {
- 
-  checkbox.onclick = () => {
-    
-    for (let tarjeta of tarjetas) {
-     
-      if (checkbox.checked) {
-        const rating = tarjeta.dataset.rating;
-       
-        if (checkbox.value === rating) {
-          tarjeta.classList.remove('hidden');
-        } else {
-          tarjeta.classList.add('hidden');
-        }
-
-       
-      } 
-      else {
-        tarjeta.classList.remove('hidden');
-      }
-    }
+  checkbox.oninput = () => {
+    filtrarTarjetas();
   };
 }
 
 
-// ------------------------FILTRO CATEGORIA ---------------------------
-
- 
-// const categoriaChequeada = () => {
-//    for (let checkbox of filtroCategoria){
-    
-//     if (checkbox.checked) {
-//       return true
-//     }
-//      else {
-//        return false 
-//      }
-//    }
-    
-// }
-
-
-
-for (let checkbox of filtroCategoria) {
-
-  checkbox.onclick = () => {
-    for (let tarjeta of tarjetas){
-      if (checkbox.checked) {
-        const category = tarjeta.dataset.value;
-        console.log(category)
-        if (checkbox.value === category) {
-
-          tarjeta.classList.remove('hidden');
-        } else {
-          tarjeta.classList.add('hidden');
-        }
-     
-      }
-      else {
-        tarjeta.classList.remove('hidden');
-      }
+//*------------------------FILTRO TARJETAS------------------//
+const filtrarTarjetas = () => {
+  for (let tarjeta of tarjetas) {
+    if (pasaFiltros(tarjeta)) {
+      mostrarTarjetas(tarjeta);
+    } else {
+      ocultarTarjetas(tarjeta);
     }
   }
+  mostrarCantidadDeTarjetas()
+};
+
+const mostrarTarjetas = (tarjeta) => {
+  return tarjeta.classList.remove("hidden");
+};
+
+const ocultarTarjetas = (tarjeta) => {
+  return tarjeta.classList.add("hidden");
+};
+
+const hayAlgunaCategoriaChequeada = () => {
+  for (let checkbox of filtroCategoria) {
+    if (checkbox.checked) {
+      return true;
+    }
+  }
+  return false;
+};
+
+const hayAlgunRatingSeleccionado = () => {
+  for (let checkbox of filtroRating) {
+    if (checkbox.checked) {
+      return true;
+    }
+  }
+  return false;
+};
+
+const hayAlgoEscritoEnInput = () => {
+  return Boolean(filtroNombre.value);
+};
+
+const coincideBusquedaInputConTarjeta = (tarjeta) => {
+  const nombreTarjeta = tarjeta.dataset.nombre.toLowerCase();
+  const busquedaUsuario = filtroNombre.value.toLowerCase();
+
+  if (nombreTarjeta.includes(busquedaUsuario)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+const coincideCategoriaConTarjeta = (tarjeta) => {
+  for (let checkbox of filtroCategoria) {
+    if (checkbox.value === tarjeta.dataset.categoria && checkbox.checked) {
+      return true;
+    }
+  }
+  return false;
+};
+
+const coincideRatingConTarjeta = (tarjeta) => {
+  for (let checkbox of filtroRating) {
+    if (checkbox.value === tarjeta.dataset.rating && checkbox.checked) {
+      return true;
+    }
+  }
+  return false;
+};
+
+const filtroInputEscrito = (tarjeta) => {
+  if (hayAlgoEscritoEnInput()) {
+    return coincideBusquedaInputConTarjeta(tarjeta);
+  } else {
+    return true;
+  }
+};
+
+const filtroCategoriaSeleccionada = (tarjeta) => {
+  if (hayAlgunaCategoriaChequeada()) {
+    return coincideCategoriaConTarjeta(tarjeta);
+  } else {
+    return true;
+  }
+};
+
+const filtroRatingSeleccionado = (tarjeta) => {
+  if (hayAlgunRatingSeleccionado()) {
+    return coincideRatingConTarjeta(tarjeta);
+  } else {
+    return true;
+  }
+};
+
+//*------------------------PASA FILTROS FINAL ------------------//
+
+const pasaFiltros = (tarjeta) => {
+  if (
+    filtroInputEscrito(tarjeta) == true &&
+    filtroCategoriaSeleccionada(tarjeta) == true &&
+    filtroRatingSeleccionado(tarjeta) == true
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+
+// ---------------------GRILLA -------------------
+const botonLista = document.querySelector(".filter-button.list");   
+const botonGrilla = document.querySelector(".filter-button.grid");  
+
+botonLista.onclick = () => {
+  for (let tarjeta of tarjetas) {
+    tarjeta.classList.remove("contenedor-tarjetas")
+    tarjeta.classList.remove("tarjetas")
+  }
+  
 }
 
-
-// const pasaFiltros = (tarjeta) =>{
-
-// if (hayAlgoEscritoEnElinput()) {
-//   if (filtrarTarjetaPorNombre(tarjeta)){
-//     return true 
-//   }
-//   else return false }
-
-// else{
-//   return true 
-// } 
+console.log(botonLista("estoy haciendo click"))
 
 
-// if (hayCategoriaChequeada()) {
-//   if (categoriaChequeada(tarjeta))
-// }
-
-
-// const boton = document.getElementById('limpiar')
-// const busqueda = document.getElementById(`filtro`)
-// const checkboxes = document.querySelectorAll(`review-filter`)
-
-
-// const limpiarFiltro = () => {
-
-//   busqueda.value = ``
-// }
-
-
-// const limpiarCheck = () => {
-
-//   for (let checkbox of checkboxes) {
-
-//     checkbox.checked = false
-//   }
-// }
-
-
-// boton.onclick = () => {
-
-//   limpiarFiltro()
-
-//   console.log(limpiarFiltro())
-
-//   limpiarCheck()
-
-//   console.log(limpiarCheck())
-// }
 
 
 
@@ -208,23 +188,6 @@ botonCerrarCarrito.onclick = () => {
 }
 
 
-// ---------------------GRILLA -------------------
-
-// const botonLista = document.querySelector("filter-button list");   
-// const botonGrilla = document.querySelector("filter-button");  
-// const 
-
-
-
-// botonLista.onclick = () => {
-
-//   for (let tarjeta of tarjetas)
-  
-//   tarjetas.classList.remove("contenedor-tarjetas")
-
-// console.log(tarjeta)  
-
-// }
 
 // -------------------MODAL-------------------
 

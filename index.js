@@ -163,7 +163,7 @@ limpiar.onclick = () => {
 //*------------------------MOSTRAR PRODUCTOS------------------//
 
 
-const tarjetasVisibles = document.getElementById("productos-visibles")
+const tarjetasVisibles = document.getElementById("#productos-visibles")
 
  const mostrarCantidadDeTarjetas = () => {
    const tarjetasEscondidas = document.querySelectorAll(".hidden-tarjetas")
@@ -204,14 +204,20 @@ botonCerrarFiltro.onclick = () => {
 // ---------------------GRILLA -------------------
 const botonLista = document.querySelector(".filter-button.list");   
 const botonGrilla = document.querySelector(".filter-button.grid");  
+const contenedorTarjetas = document.querySelector(".contenedor-tarjetas.grilla");
+console.log(contenedorTarjetas)
 
 botonLista.onclick = () => {
-  for (let tarjeta of tarjetas) {
-    tarjeta.classList.remove("contenedor-tarjetas")
-    tarjeta.classList.remove("tarjetas")
-  }
-  
-}
+  contenedorTarjetas.classList.remove("grilla");
+  contenedorTarjetas.classList.add("lista");
+};
+
+botonGrilla.onclick = () => {
+  contenedorTarjetas.classList.remove("lista");
+  contenedorTarjetas.classList.add("grilla");
+};
+
+
 
 
 
@@ -254,14 +260,14 @@ const overlayModal = document.getElementById("overleyModal")
 const botonSeguirComprando = document.querySelector(".seguir-comprando")
 
 botonIrAModal.onclick  = () => {
-  overlayModal.classList.remove("hidden")
+  overlayModal.classList.remove("ocultar")
   document.body.classList.add("no-scroll")
 }
 console.log(botonIrAModal)
 
 
 botonSeguirComprando.onclick = () => {
-  overlayModal.classList.add("hidden")
+  overlayModal.classList.add("ocultar")
   document.body.classList.remove("no-scroll")
 
 }

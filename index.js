@@ -185,23 +185,28 @@ console.log(botonFiltroResponsive)
 const botonCerrarFiltro = document.querySelector(".close-filter-responsive")
 console.log(botonCerrarFiltro)
 
-const filtroAbierto = document.querySelector(".filtros.responsive")
+const filtroAbierto = document.querySelector(".responsive-abrir")
 
 console.log(filtroAbierto)
 
+const overleyFiltro = document.querySelector(".overlay")
 
 botonFiltroResponsive.onclick = () => {
-  overlay.classList.remove("ocultar")
+  overleyFiltro.classList.remove("ocultar")
   document.body.classList.add("no-scroll")
+  filtroAbierto.classList.remove("responsive-abrir")
+}
+
+
+botonCerrarFiltro.onclick = () => {
+   overleyFiltro.classList.add("ocultar")
+  document.body.classList.remove("no-scroll")
   filtroAbierto.classList.add("responsive-abrir")
 }
 
-botonCerrarFiltro.onclick = () => {
-  overlay.classList.add("ocultar")
-  document.body.classList.remove("no-scroll")
-  filtroAbierto.classList.remove("responsive-abrir")
-}
-// ---------------------GRILLA -------------------
+
+
+// ---------------------GRILLA  / LISTA   -------------------
 const botonLista = document.querySelector(".filter-button.list");   
 const botonGrilla = document.querySelector(".filter-button.grid");  
 const contenedorTarjetas = document.querySelector(".contenedor-tarjetas.grilla");
@@ -256,7 +261,7 @@ botonCerrarCarrito.onclick = () => {
 // -------------------MODAL-------------------
 
 const botonIrAModal = document.getElementById("comprar-checkout-modal")
-const overlayModal = document.getElementById("overleyModal")
+const overlayModal = document.getElementById("overlayModal")
 const botonSeguirComprando = document.querySelector(".seguir-comprando")
 
 botonIrAModal.onclick  = () => {

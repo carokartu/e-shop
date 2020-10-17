@@ -437,21 +437,9 @@ margin-top: 5px;
     color: #3e434b;
 }
 
-
-
-
-
-
-
-
-   */
-
-
-
-
-
-
-
+.filter-responsive-button{
+  display: none;
+}
 
    /* ------------------------------INICIO DE FOOTER------------------------ */
 
@@ -667,9 +655,10 @@ display: flex;
 }
 
 
-.modal-overley{
+.modal-overlay{
   background-color: #fafafa;
   position: absolute;
+  top:0
 }
 
 .contenedor-title-checkout {
@@ -812,7 +801,9 @@ padding: 80px 10px 30px;
 
 
 @media(max-width : 1200px) {
-
+*{
+  overflow-x: hidden;
+}
   .product {
     width: 44%;
   } 
@@ -856,32 +847,61 @@ padding: 80px 10px 30px;
   }
 
 
-  .responsive-abir{
-    transform: translateX(0px);
+  .titles-filter {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-weight: bolder;
   }
   
-  .filtros.reponsive-estilos{
-    transform: translate(0px);
-    width: 100%;
-    height: 100%;
-    max-width: 400px;
+  .filtros { 
+  
+    width: 260px;
+    margin-left: 5px;
+    padding-top: 15px;
+    padding: 25px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
     position: fixed;
     top: 0;
     right: 0;
-    transform: translateX(100%);
-    padding: 40px 20px;
-    background-color: #fff;
-    border-left: 1px solid #dedede;
-    display: flex;
-    flex-direction: column;
-    transition: 0.2s;
     z-index: 5000;
+    padding: 40px 0;
+    transform: translateX(0%);
+    transition: 0.3s;
+      
+  }
+  
+  .div-filtros{
+      display: flex;
+  }
+  
+  .filtros-limpieza{
+      display: flex;
+      text-align: center;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+   .responsive-abrir{
+    transform: translateX(100%);
+   }
+
+   .overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
   }
 
-  .close-filter-responsive{
-    display: flex;
+   .ocultar {
+    display: none;
+  
   }
 }
+
 
 
 
@@ -889,10 +909,6 @@ padding: 80px 10px 30px;
 
 @media(max-width : 750px) {
  
-*{
-
-  overflow-x: hidden;
-}
 
   .overlay{
     width: 100%;
@@ -935,13 +951,10 @@ padding: 80px 10px 30px;
 
 
 
-@media(max-width : 200px) {
-  .contenedor-tarjetas {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    height: 3500px;
-    width: 2200px;
+@media(max-width : 400px) {
+  ..titulo-principal {
+      font-size: 26px; {
+ 
 
 }
 }
@@ -958,6 +971,7 @@ padding: 80px 10px 30px;
 }
 
 /* 
+
 
 .product-img-container{
   justify-content: flex-start;

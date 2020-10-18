@@ -163,14 +163,15 @@ limpiar.onclick = () => {
 //*------------------------MOSTRAR PRODUCTOS------------------//
 
 
-const tarjetasVisibles = document.getElementById("#productos-visibles")
-
+const tarjetasVisibles = document.getElementById("productos-visibles")
+console.log(tarjetasVisibles)
  const mostrarCantidadDeTarjetas = () => {
    const tarjetasEscondidas = document.querySelectorAll(".hidden-tarjetas")
    const longitudDeTarjetasEscondidas = tarjetasEscondidas.length
    const tarjetasVisibles = 12 - longitudDeTarjetasEscondidas
 
-   longitudDeTarjetasEscondidas.textContent = tarjetasVisibles
+   
+   longitudDeTarjetasEscondidas.textContent= tarjetasVisibles
  }
 
 //*------------------------LIMPIAR FILTROS ------------------//
@@ -179,22 +180,19 @@ const tarjetasVisibles = document.getElementById("#productos-visibles")
 
 
 const botonFiltroResponsive = document.querySelector(".filter-responsive-button")
-
-console.log(botonFiltroResponsive)
-
 const botonCerrarFiltro = document.querySelector(".close-filter-responsive")
-console.log(botonCerrarFiltro)
-
 const filtroAbierto = document.querySelector(".responsive-abrir")
-
-console.log(filtroAbierto)
-
 const overleyFiltro = document.querySelector(".overlay")
+
+
+
 
 botonFiltroResponsive.onclick = () => {
   overleyFiltro.classList.remove("ocultar")
   document.body.classList.add("no-scroll")
   filtroAbierto.classList.remove("responsive-abrir")
+  
+
 }
 
 
@@ -202,6 +200,7 @@ botonCerrarFiltro.onclick = () => {
    overleyFiltro.classList.add("ocultar")
   document.body.classList.remove("no-scroll")
   filtroAbierto.classList.add("responsive-abrir")
+  
 }
 
 
@@ -210,16 +209,19 @@ botonCerrarFiltro.onclick = () => {
 const botonLista = document.querySelector(".filter-button.list");   
 const botonGrilla = document.querySelector(".filter-button.grid");  
 const contenedorTarjetas = document.querySelector(".contenedor-tarjetas.grilla");
-console.log(contenedorTarjetas)
+
 
 botonLista.onclick = () => {
   contenedorTarjetas.classList.remove("grilla");
   contenedorTarjetas.classList.add("lista");
+  contenedorTarjetas.classList.remove(".ver")
 };
 
 botonGrilla.onclick = () => {
   contenedorTarjetas.classList.remove("lista");
   contenedorTarjetas.classList.add("grilla");
+  contenedorTarjetas.classList.add(".ver")
+
 };
 
 
@@ -232,19 +234,9 @@ botonGrilla.onclick = () => {
 
 
 const botonAbrirCarrito = document.querySelector(".boton-carrito")
-
-console.log(botonAbrirCarrito)
-
 const botonCerrarCarrito = document.querySelector(".close-cart")
-console.log(botonCerrarCarrito)
-
 const carritoAbierto = document.querySelector(".cart-open")
-
-console.log(carritoAbierto)
-
 const overlay = document.getElementById("overlay ocultar")
-
-console.log(overlay)
 
 
 botonAbrirCarrito.onclick = () => {
@@ -262,13 +254,15 @@ botonCerrarCarrito.onclick = () => {
 
 const botonIrAModal = document.getElementById("comprar-checkout-modal")
 const overlayModal = document.getElementById("overlayModal")
-const botonSeguirComprando = document.querySelector(".seguir-comprando")
+const botonSeguirComprando = document.querySelector("#seguir-comprando")
+const botonFinalizar = document.getElementById("finalizar-compra")
 
 botonIrAModal.onclick  = () => {
   overlayModal.classList.remove("ocultar")
   document.body.classList.add("no-scroll")
+  
 }
-console.log(botonIrAModal)
+
 
 
 botonSeguirComprando.onclick = () => {
@@ -277,7 +271,15 @@ botonSeguirComprando.onclick = () => {
 
 }
 
-console.log(botonSeguirComprando)
+botonFinalizar.onclick = () => {
+  overlayModal.classList.add("ocultar")
+  document.body.classList.remove("no-scroll")
+  overlay.classList.add("ocultar")
+  document.body.classList.remove("no-scroll")
+  carritoAbierto.classList.remove("abrir-carrito")
+
+}
+
 
 // -------------------MODAL-------------------
 
@@ -300,23 +302,25 @@ const parrafoDescuento = document.querySelector(".descuento")
 const parrafoEnvio = document.querySelector(".envio")
 const parrafoRecargo = document.querySelector(".recargo")
 
-const subtotal = 100
+const subtotal = 49888
+
 
 mostrarSubtotal.textContent = subtotal
 mostrarTotal.textContent = subtotal
 
 const obtenerGastoEnvio = (subtotal) => {
-return subtotal +50
+    return subtotal + 300
 }
 
 const obtenerRecargo = (subtotal) => {
     let recargo = subtotal * 0.1
-    return  subtotal + recargo
+    return subtotal + recargo
 }
 
 const obtenerDescuento = (subtotal) => {
-    let descuento = subtotal * 0.1
-    return  subtotal - descuento
+    let descuento = subtotal * 0.05
+    
+    return subtotal - descuento
 }
 
 
@@ -327,40 +331,38 @@ radioEfectivo.oninput = () => {
 
 checkboxDescuento.oninput = () => {
     parrafoDescuento.classList.toggle("hidden")
-    mostrarDescuento.textContent = subtotal - obtenerDescuento(subtotal) 
-    mostrarTotal.textContent = obtenerTotal(subtotal)
+    mostrarDescuento.textContent = (subtotal - obtenerDescuento(subtotal)).toFixed(2)
+    mostrarTotal.textContent = (obtenerTotal(subtotal)).toFixed(2)
 }
 
 radioCredito.oninput = () => {
     parrafoRecargo.classList.remove("hidden")
-    mostrarRecargo.textContent =  obtenerRecargo(subtotal) - subtotal
-    mostrarTotal.textContent = obtenerTotal(subtotal)
+    mostrarRecargo.textContent = (obtenerRecargo(subtotal) - subtotal).toFixed(2)
+    mostrarTotal.textContent = (obtenerTotal(subtotal)).toFixed(2)
 }
 
 checkboxEnvio.oninput = () => {
     parrafoEnvio.classList.toggle("hidden")
-    mostrarEnvio.textContent = 50
-    mostrarTotal.textContent = obtenerTotal(subtotal)
+    mostrarEnvio.textContent = 300
+    mostrarTotal.textContent = (obtenerTotal(subtotal)).toFixed(2)
 }
-
-
 
 const obtenerTotal = (subtotal) => {
     let descuento = 0
     let recargo = 0
     let gastosDeEnvio = 0
-    if(checkboxDescuento.checked) {
+    if (checkboxDescuento.checked) {
         descuento = obtenerDescuento(subtotal) - subtotal
     }
-    if(radioCredito.checked) {
+    if (radioCredito.checked) {
         recargo = obtenerRecargo(subtotal) - subtotal
     }
     else {
         parrafoRecargo.classList.add('hidden')
     }
-    if(checkboxEnvio.checked) {
+    if (checkboxEnvio.checked) {
         gastosDeEnvio = obtenerGastoEnvio(subtotal) - subtotal
     }
     return subtotal + descuento + recargo + gastosDeEnvio
-
+    
 }

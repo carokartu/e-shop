@@ -58,6 +58,123 @@
     
     -->
 
+    <!-- ----------COMIENZO DE MODAL------------- -->
+
+    <section>
+        <div class="modal-overlay ocultar" id="overlayModal">
+
+            <div class="modal-container">
+                <div class="modal-open">
+                    <article class="modal-checkout" id="modal-checkout">
+
+
+
+                        <div class="checkout">
+                            <form action="" class="datos-form">
+
+                                <div class="datos-usuario">
+                                    <h3 class="datos-personales"> Datos Personales</h3>
+                                    <h2 class="nombre-usuario"> Nombre y Apellido * </h2>
+                                    <label for="nombre">
+                                        <input type="text" name="nombre" id="nombre" class="input-checkout"
+                                            placeholder=" Regina Phalange"  required>
+
+                                    </label>
+                                    <h2 class="email-usuario"> 
+                                        Email *
+
+                                    </h2>
+
+                                    <label for="email">
+                                        <input type="email" name="email" id="email" class="input-checkout"
+                                            placeholder="reginaphlange@gmail.com"  required>
+
+                                    </label>
+                                </div>
+
+                                <hr />
+                                <div class="pago">
+                                    <h3 class="opciones-pago"> Opciones de pago </h3>
+                                    <label for="input-efectivo">
+                                        <input type="radio" name="forma-de-pago" id="input-efectivo"
+                                            value="efectivo-debito">
+                                        Efectivo/Debito
+                                    </label>
+                                    <label for="input-credito">
+                                        <input type="radio" name="forma-de-pago" id="input-credito"
+                                            value="tarjeta-credito">
+                                        Tarjeta De Credito
+                                    </label>
+
+                                    <label for="input-envio">
+                                        <input type="checkbox" name="envio" id="input-envio" value="envio">
+                                        Necesito Envio
+                                    </label>
+
+                                    <label for="input-descuento">
+                                        <input type="checkbox" name="descuento" id="input-descuento" value="descuento">
+                                        Tengo tarjeta de descuento
+                                    </label>
+
+                                </div>
+
+
+                            </form>
+                            <div class="resumen-pago">
+                                <div>
+                                    <h3 class="titulo-resumen">
+                                        Resumen
+                                    </h3>
+
+                                </div>
+
+                                <div class="valores-subtotal">
+                                    <p>
+                                        Subtotal : <span id="subtotal"> 0 </span>
+                                    </p>
+                                    <p class="hidden descuento"> Descuento 10%: <span id="descuento"> 0</span>
+                                    </p>
+
+                                    <p class="hidden envio"> Envio: <span id="envio"> 0 </span>
+
+                                    </p>
+
+                                    <p class="hidden recargo"> Recargo: <span id="recargo"> 0 </span>
+
+                                    </p>
+
+                                    <p class="total-modal"> Total: <span id="total"> 0 </span>
+
+                                    </p>
+                                </div>
+
+
+
+
+
+                                <div class="footer-checkout">
+                                    <button id="seguir-comprando" class="seguir-comprando">
+                                        SEGUIR COMPRANDO
+                                    </button>
+                                    <button id="finalizar-compra" class="finalizar-compra">
+                                        FINALIZAR
+
+                                    </button>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </article>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
 
 
     <!--   
@@ -67,8 +184,9 @@
     <div class="pagina">
         <section class="filtros responsive-abrir">
             <aside class="filtros responsive-estilos">
-               <button class="close-filter-responsive"> <i class="far fa-times-circle"></i>
-               </button> 
+                <button class="close-filter-responsive">
+                    <i class="far fa-times-circle"></i>
+                </button>
                 <div class="filtros-limpieza">
 
                     <h3>FILTROS</h3>
@@ -82,9 +200,10 @@
 
 
                     <h4 class="titles-filter"> BÚSQUEDA </h4>
+                    <label> <i class="fas fa-search"> </i> </label>
                     <input type="text" class="search-box" id="filtro" />
 
-                    <label> <i class="fas fa-search"> </i> </label>
+
 
                 </div>
 
@@ -207,7 +326,7 @@
                 <div class="contenedor-tarjetas grilla">
 
 
-                    <article class="product grilla lista" data-nombre=" Headphones Philips" data-categoria="Headphones"
+                    <article class="product grilla lista" data-nombre=" Headphones Philips" data-categoria="accesorios"
                         value="accesorios" data-precio="22499" data-rating="4">
                         <div class="product-img-container">
                             <img src="./imagenes/auriculares-2.jpeg" class="product-img" />
@@ -215,9 +334,11 @@
                         <div class="product-body">
                             <h3 class="product-name">Headphones Philips</h3>
                             <p class="product-price">$ 22499</p>
-                            <p  class="ocultar descripcion-lista" id="producto-lista">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem architecto eveniet, mollitia id 
-                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere placeat magnam! </p>
+                            <p class="ocultar descripcion-lista" id="producto-lista">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem
+                                architecto eveniet, mollitia id
+                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere
+                                placeat magnam! </p>
                             <div class="review">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -229,7 +350,7 @@
                         </div>
                     </article>
 
-                    <article class="product grilla" data-nombre="Auriculares" data-categoria="Auriculares"
+                    <article class="product grilla" data-nombre="Auriculares" data-categoria="accesorios"
                         data-value="accesorios" data-precio="22499" data-rating="3">
                         <div class="product-img-container">
                             <img src="./imagenes/auriculares.jpeg" class="product-img" />
@@ -237,9 +358,11 @@
                         <div class="product-body">
                             <h3 class="product-name">Auriculares</h3>
                             <p class="product-price">$ 22499</p>
-                            <p  class="ocultar descripcion-lista" id="producto-lista">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem architecto eveniet, mollitia id 
-                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere placeat magnam! </p>
+                            <p class="ocultar descripcion-lista" id="producto-lista">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem
+                                architecto eveniet, mollitia id
+                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere
+                                placeat magnam! </p>
                             <div class="review">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -259,9 +382,11 @@
                         <div class="product-body">
                             <h3 class="product-name">Camara Nikon</h3>
                             <p class="product-price">$ 22499</p>
-                            <p  class="ocultar descripcion-lista" id="producto-lista">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem architecto eveniet, mollitia id 
-                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere placeat magnam! </p>
+                            <p class="ocultar descripcion-lista" id="producto-lista">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem
+                                architecto eveniet, mollitia id
+                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere
+                                placeat magnam! </p>
                             <div class="review">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -283,9 +408,11 @@
                         <div class="product-body">
                             <h3 class="product-name">Celular Motorola</h3>
                             <p class="product-price">$ 22499</p>
-                            <p  class="ocultar descripcion-lista" id="producto-lista">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem architecto eveniet, mollitia id 
-                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere placeat magnam! </p>
+                            <p class="ocultar descripcion-lista" id="producto-lista">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem
+                                architecto eveniet, mollitia id
+                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere
+                                placeat magnam! </p>
                             <div class="review">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -299,7 +426,7 @@
 
 
 
-                    <article class="product grilla" data-nombre="Mouse Gamer" data-categoria="Mouse"
+                    <article class="product grilla" data-nombre="Mouse Gamer" data-categoria="accesorios"
                         data-value="accesorios" data-precio="22499" data-rating="2">
                         <div class="product-img-container">
                             <img src="./imagenes/mouse.jpeg" class="product-img" />
@@ -307,9 +434,11 @@
                         <div class="product-body">
                             <h3 class="product-name">Mouse gamer</h3>
                             <p class="product-price">$ 22499</p>
-                            <p  class="ocultar descripcion-lista" id="producto-lista">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem architecto eveniet, mollitia id 
-                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere placeat magnam! </p>
+                            <p class="Ver descripcion-lista" id="producto-lista">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem
+                                architecto eveniet, mollitia id
+                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere
+                                placeat magnam! </p>
                             <div class="review">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -330,9 +459,11 @@
                         <div class="product-body">
                             <h3 class="product-name">Nintendo Switch </h3>
                             <p class="product-price">$ 22499</p>
-                            <p  class="ocultar descripcion-lista" id="producto-lista">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem architecto eveniet, mollitia id 
-                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere placeat magnam! </p>
+                            <p class="ocultar descripcion-lista" id="producto-lista">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem
+                                architecto eveniet, mollitia id
+                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere
+                                placeat magnam! </p>
                             <div class="review">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -354,9 +485,11 @@
                         <div class="product-body">
                             <h3 class="product-name">Notebook</h3>
                             <p class="product-price">$ 22499</p>
-                            <p  class="ocultar descripcion-lista" id="producto-lista">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem architecto eveniet, mollitia id 
-                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere placeat magnam! </p>
+                            <p class="ocultar descripcion-lista" id="producto-lista">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem
+                                architecto eveniet, mollitia id
+                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere
+                                placeat magnam! </p>
                             <div class="review">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -376,9 +509,11 @@
                         <div class="product-body">
                             <h3 class="product-name">Notebook</h3>
                             <p class="product-price">$ 22499</p>
-                            <p  class="ocultar descripcion-lista" id="producto-lista">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem architecto eveniet, mollitia id 
-                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere placeat magnam! </p>
+                            <p class="ocultar descripcion-lista" id="producto-lista">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem
+                                architecto eveniet, mollitia id
+                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere
+                                placeat magnam! </p>
                             <div class="review">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -399,9 +534,11 @@
                         <div class="product-body">
                             <h3 class="product-name">Notebook </h3>
                             <p class="product-price">$ 22499</p>
-                            <p  class="ocultar descripcion-lista" id="producto-lista">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem architecto eveniet, mollitia id 
-                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere placeat magnam! </p>
+                            <p class="ocultar descripcion-lista" id="producto-lista">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem
+                                architecto eveniet, mollitia id
+                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere
+                                placeat magnam! </p>
                             <div class="review">
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
@@ -421,9 +558,11 @@
                         <div class="product-body">
                             <h3 class="product-name">PlayStation 4 </h3>
                             <p class="product-price">$ 22499</p>
-                            <p  class="ocultar descripcion-lista" id="producto-lista">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem architecto eveniet, mollitia id 
-                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere placeat magnam! </p>
+                            <p class="ocultar descripcion-lista" id="producto-lista">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem
+                                architecto eveniet, mollitia id
+                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere
+                                placeat magnam! </p>
                             <div class="review">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -445,9 +584,11 @@
                         <div class="product-body">
                             <h3 class="product-name">Xbox one </h3>
                             <p class="product-price">$ 68959</p>
-                            <p  class="ocultar descripcion-lista" id="producto-lista">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem architecto eveniet, mollitia id 
-                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere placeat magnam! </p>
+                            <p class="ocultar descripcion-lista" id="producto-lista">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem
+                                architecto eveniet, mollitia id
+                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere
+                                placeat magnam! </p>
                             <div class="review">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -468,9 +609,11 @@
                         <div class="product-body">
                             <h3 class="product-name">Celular Iphone</h3>
                             <p class="product-price">$ 22499</p>
-                            <p  class="ocultar descripcion-lista" id="producto-lista">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem architecto eveniet, mollitia id 
-                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere placeat magnam! </p>
+                            <p class="ocultar descripcion-lista" id="producto-lista">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi ex amet dolorem
+                                architecto eveniet, mollitia id
+                                voluptate tenetur quas dicta ut unde laboriosam laudantium, sapiente natus facere
+                                placeat magnam! </p>
                             <div class="review">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -506,9 +649,9 @@
         <div class="cart-container">
             <div class="cart-open">
                 <p class="cart-added"> 2 producto(s) agregado(s) </p>
-                <button class="close-cart"> 
-                <i class="far fa-times-circle"></i>
-            </button>
+                <button class="close-cart">
+                    <i class="far fa-times-circle"></i>
+                </button>
                 <article class="cart-article" data-nombre="Mouse Gamer" data-categoria="Mouse" data-value="accesorios"
                     data-precio="22499" data-rating="2">
                     <img src="./imagenes/mouse.jpeg" class="product-img" id="img-cart" />
@@ -572,126 +715,6 @@
     </section>
 
 
-
-    <!-- ----------COMIENZO DE MODAL------------- -->
-
-    <section>
-         <div class="modal-overlay ocultar" id="overlayModal">
-        
-        <div class="modal-container">
-            <div class="modal-open">
-
-
-                <header>
-                    <button type="button" class="close-modal" aria-label="cerrar modal">
-                        <i class="far fa-times-circle" aria-hidden="true"></i>
-                    </button>
-                </header>
-
-                <article class="modal-checkout" id="modal-checkout">
-                    <div class="contenedor-titulo-checkout">
-                        <h2 class="titulo"> Checkout </h2>
-                    </div>
-
-                    <div class="checkout">
-                        <form action="" class="datos-form">
-                            <div class="datos-usuario">
-                                <h3 class="datos-personales"> Datos Personales</h3>
-                                <h2 class="nombre-usuario"> Nombre y Apellido * </h2>
-                                <label for="nombre">
-                                    <input type="text" name="nombre" id="nombre" class="input-checkout"
-                                        placeholder="p. ej.: Regina Phalange" required>
-
-                                </label>
-                                <h2>
-                                    Email *
-
-                                </h2>
-
-                                <label for="email">
-                                    <input type="email" name="email" id="email" class="input-checkout"
-                                        placeholder="p. ej.:reginaphlange@gmail.com" required>
-
-                                </label>
-                            </div>
-
-                            <hr />
-                            <div class="pago">
-                                <h3 class="opciones-pago"> Opciones de pago </h3>
-                                <label for="input-efectivo">
-                                    <input type="radio" name="forma-de-pago" id="input-efectivo"
-                                        value="efectivo-debito">
-                                    Efectivo/Debito
-                                </label>
-                                <label for="input-credito">
-                                    <input type="radio" name="forma-de-pago" id="input-credito" value="tarjeta-credito">
-                                    Tarjeta De Credito
-                                </label>
-
-                                <label for="input-envio">
-                                    <input type="checkbox" name="envio" id="input-envio" value="envio">
-                                    Necesito Envio
-                                </label>
-
-                                <label for="input-descuento">
-                                    <input type="checkbox" name="descuento" id="input-descuento" value="descuento">
-                                    Tengo tarjeta de descuento
-                                </label>
-
-                            </div>
-
-                        </form>
-
-                        <div class="resumen-pago">
-                            <div>
-                                <h3 class="titulo-resumen">
-                                    Resumen
-                                </h3>
-
-                            </div>
-
-                            <div class="valores-subtotal">
-                                <p>
-                                    Subtotal : <span id="subtotal"> 0 </span>
-                                </p>
-                                <p class="hidden descuento"> Descuento 10%: <span id="descuento"> 0</span>
-                                </p>
-
-                                <p class="hidden envio"> Envio: <span id="envio"> 0 </span>
-
-                                </p>
-
-                                <p class="hidden recargo"> Recargo: <span id="recargo"> 0 </span>
-
-                                </p>
-
-                                <p> Total: <span id="total"> 0 </span>
-
-                                </p>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="footer-checkout">
-                        <button id="seguir-comprando" class="seguir-comprando">
-                            SEGUIR COMPRANDO
-
-
-                        </button>
-                        <button id="finalizar-compra" class="finalizar-compra">
-                            FINALIZAR
-
-                        </button>
-
-                    </div>
-                </article>
-            </div>
-
-
-
-    </section>
 
 
     <script src="index.js"></script>

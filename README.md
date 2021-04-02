@@ -10,7 +10,7 @@ Todavia me queda mucho por aprender, cualquier comentario para mejorar sera bien
 Gracias! 
 Carolina.
 
-[Click aqui para ir a mi portfolio](https://portfolio-carokrstulovich.netlify.app/)
+[Click aqui para ir a mi tienda]( https://carokartu.github.io/proyecto-ada2/)
 
 ### Tecnologías
 - HTML5
@@ -41,7 +41,7 @@ Sill a lot to learn, any comment are welcome.
 Thanks ! 
 Carolina
 
-[Click here and go to my portfolio](https://portfolio-carokrstulovich.netlify.app/)
+[Click here and go to my shop]( https://carokartu.github.io/proyecto-ada2/)
 
 ### Tecnology
 - HTML5
